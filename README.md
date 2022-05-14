@@ -1,2 +1,2 @@
-# ct-scan-ich-detector
-Detects the presence of ICH using a 2-dimensional C.T. scan of the brain (presented in .png ir .jpg).
+# C.T. Scan I.C.H. Detector
+Detects the presence of I.C.H. using a 2-dimensional C.T. scan of the brain (presented in .png ir .jpg).
