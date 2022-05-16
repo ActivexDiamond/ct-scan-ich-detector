@@ -8,6 +8,8 @@ Created on Fri Apr 29 22:50:38 2022
 
 ############################## Dependencies ##############################
 import os
+import math
+
 import cv2
 import numpy
 from matplotlib import pyplot
@@ -47,7 +49,7 @@ FIG_SIZE = (20, 20)
 ############################## Main Function ##############################
 def strip_skull(image, poorImageChecks=True, debug=True, _threshold=THRESHOLD):
     ############### Preprocessing
-    ##Convert to high-saturation.
+    ##Convert to high-saturation gray-scale.
     #print(image.shape)
     gray_image = cv2.cvtColor(image, GRAYING_MODE)
     ##Blur image to reduce "holes" left in the skull.
@@ -70,8 +72,8 @@ def strip_skull(image, poorImageChecks=True, debug=True, _threshold=THRESHOLD):
         cv2.floodFill(threshold_mask, None, (w - offset, h - offset), 0)
         
     ##Check if threshold was too high, and re-run with a lower one.
-    black_pixels = cv2.countNonZero(threshold_mask) / (threshold_mask.size)
-    white_pixels = 100 - black_pixels
+    #black_pixels = cv2.countNonZero(threshold_mask) / (threshold_mask.size)
+    #white_pixels = 100 - black_pixels
     
     white_pixels = numpy.sum(threshold_mask == 255) / (threshold_mask.size)
     black_pixels = numpy.sum(threshold_mask == 0) / (threshold_mask.size)
@@ -111,7 +113,8 @@ def strip_skull(image, poorImageChecks=True, debug=True, _threshold=THRESHOLD):
         cnt = contours[i]
         if len(cnt) >= 5:
             ellipse = cv2.fitEllipse(cnt)
-            # cv2.ellipse(ellipse_mask, ellipse, 64, 8)
+            if not math.isnan(ellipse[0][0]):
+                cv2.ellipse(ellipse_mask, ellipse, (0, 0, 64), 0)
         
         eps = EPSILON_FOR_DP_APPROX * cv2.arcLength(cnt, True)
         approx = cv2.approxPolyDP(cnt, eps, True)
@@ -120,8 +123,8 @@ def strip_skull(image, poorImageChecks=True, debug=True, _threshold=THRESHOLD):
         isConvex = cv2.isContourConvex(cnt)
         #print(f"At: `contour  == {i}` and `isConvex == {isConvex}`")
         hull = cv2.convexHull(cnt)
-        cv2.drawContours(convex_mask, [hull], 0, 64, -1)
-        cv2.drawContours(contour_mask, [hull], 0, 64, -1)
+        cv2.drawContours(convex_mask, [hull], 0, 64, cv2.FILLED)
+        cv2.drawContours(contour_mask, [hull], 0, 64, cv2.FILLED)
         
 
     #Sharpen contour_mask.
