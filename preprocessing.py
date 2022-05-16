@@ -2,8 +2,9 @@
 # -*- coding: utf-8 -*-
 """
 Created on Mon May 16 06:02:56 2022
+@license: MIT
 
-@author: activexdiamond
+@author: Dulfiqar 'activexdiamond' H. Al-Safi
 """
 
 ############################## Dependencies ##############################
@@ -28,24 +29,10 @@ from matplotlib import pyplot
 import skull_stripping
 import debugging
 
-############################## Constants ##############################
-##File paths.
-IMAGE_RELATIVE_PATH = "/input/head_ct/images/*.png"
-LABEL_RELATIVE_PATH = "/input/labels.csv"
+############################## Config ##############################
+import config
 
-##Preprocessing configs.
-GRAYING_MODE = cv2.COLOR_BGR2GRAY
-
-IMAGE_W = 128
-IMAGE_H = 128
-IMAGE_SIZE = (IMAGE_W, IMAGE_H)
-
-SKLEARN_SHUFFLE_SEED = 42
-RANDOM_SEED = 1337
-TEST_RATIO = 0.2                    #How much of the dataset to use for testing. float ; [0, 1]
-VALIDATION_RATIO = 0.5              #How much of the trainning dataset to use for validation. float ; [0, 1]
-
-##Plotting and display configs.
+############################## Debug Constants ##############################
 PLOT_IMAGE_FIGURE_SIZE = (10, 10)
 PLOTTED_IMAGE_COUNT = 9                #The number of raw-images to plot. int ; [0, 9]
 PLOT_IMAGE_OFFSET = 0
@@ -57,23 +44,23 @@ SKULL_STRIPS_TO_DISPLAY = 0
 ############################## Main Function ##############################
 def process_dataset():
     ############################## Init State
-    random.seed(RANDOM_SEED)
+    random.seed(config.RANDOM_SEED)
 
     ############################## Preprocessing - Fetch Image Paths 
     ##Fetch working dir.
     current_working_dir = os.getcwd()
     
     ##Fetch and sort images paths.
-    image_paths = glob(current_working_dir + IMAGE_RELATIVE_PATH)
+    image_paths = glob(current_working_dir + config.IMAGE_RELATIVE_PATH)
     image_paths = sorted(image_paths)
     dataset_len = len(image_paths)
     
     ##Fetch metadata and extract labels.
-    metadata = pandas.read_csv(current_working_dir + LABEL_RELATIVE_PATH)
+    metadata = pandas.read_csv(current_working_dir + config.LABEL_RELATIVE_PATH)
     labels = metadata[" hemorrhage"].tolist()
     
     ############################## Preprocessing - Loading & Transformations 
-    image_shape = (len(image_paths), IMAGE_W, IMAGE_H)
+    image_shape = (len(image_paths), config.IMAGE_W, config.IMAGE_H)
     #raw_images = numpy.empty(image_shape)
     
     d_raw_images = []
@@ -91,10 +78,10 @@ def process_dataset():
         image = skull_stripping.strip_skull(image, True, i < SKULL_STRIPS_TO_DISPLAY)            
         d_brain_images.append(image)
         ##Convert to gray-scale.
-        image = cv2.cvtColor(image, GRAYING_MODE)
+        image = cv2.cvtColor(image, config.FINAL_GRAYING_MODE)
         d_gray_images.append(image)
         ##Crop and resize
-        images[i, :, :] = cv2.resize(image, (IMAGE_SIZE))
+        images[i, :, :] = cv2.resize(image, (config.IMAGE_SIZE))
     print()
     
     ############################## Debug-Plot Images
@@ -118,14 +105,14 @@ def process_dataset():
     train_images, test_images, train_labels, test_labels = train_test_split(
             images,
             labels,
-            test_size=TEST_RATIO,
-            random_state=SKLEARN_SHUFFLE_SEED)
+            test_size=config.TEST_RATIO,
+            random_state=config.SKLEARN_SHUFFLE_SEED)
     
     val_images, test_images, val_labels, test_labels = train_test_split(
             test_images,
             test_labels,
-            test_size=VALIDATION_RATIO,
-            random_state=SKLEARN_SHUFFLE_SEED)
+            test_size=config.VALIDATION_RATIO,
+            random_state=config.SKLEARN_SHUFFLE_SEED)
     
     ############################## Debug-Echo Splits
     ##Some debug echoing of the used splits.
