@@ -17,12 +17,12 @@ _USE_DUMMY_PATHS = False
 
 ############################## Skull Stripping ##############################
 GRAYING_MODE = cv2.COLOR_BGR2GRAY
-BLUR_AMOUNT = (7, 7)                                        #Must be odd.
+BLUR_AMOUNT = (7, 7)
 THRESHOLD = 200                 #200
 MASK_VAL = 255
 MASK_FLOOD_SEED = 0, 0
 
-POOR_IMAGE_CHECK_SEED_OFFSET = 20                         #Must be greater than zero.
+POOR_IMAGE_CHECK_SEED_OFFSET = 20                       #Must be greater than zero.
 
 EPSILON_FOR_DP_APPROX = 0.03
 
@@ -56,12 +56,46 @@ RANDOM_SEED = 1337
 TEST_RATIO = 0.2                    #How much of the dataset to use for testing. float ; [0, 1]
 VALIDATION_RATIO = 0.5              #How much of the trainning dataset to use for validation. float ; [0, 1]
 
-############################## Feature Extraction ##############################
-BRIGHTNESS_RADIUS = 51             #Must be odd.
-SECTIONS = 3
-
 ############################## M.L. Model ##############################
+##Input
+INPUT_SHAPE = (IMAGE_W, IMAGE_H, 1)
 
+##Conv2D
+CONVOLUTION_LAYERS_FILTERS = 32
+CONVOLUTION_LAYERS_COUNT = 3
+CONVOLUTION_LAYERS_POOL_SIZE = (2, 2)
+
+##Full Layers
+FULL_LAYERS_DENSITY = 64
+
+##Conv2D & Full Layers
+ACTIVATION_LAYER = "relu"
+
+##Dropout
+DROPOUT_COEFFICIENT = 0.5
+
+##Output
+OUTPUT_DENSITY = 1
+OUTPUT_ACTIVATION_LAYER = "sigmoid"
+
+##Compilation
+LOSS = "binary_crossentropy"
+OPTIMIZER = "rmsprop"
+
+##Pre-Training
+RESCALE = 1 / 255
+SHEAR = 0
+ZOOM = 0.1
+ROTATION = 10
+SHIFT_RANGE = 0.1
+HORIZONTAL_FLIP = True
+
+##Training
+EPOCHS = 200
+BATCH_SIZE = 10
+
+##Debug
+D_RUN_EAGERLY = False
 
 ############################## Metadata ##############################
 _METADATA = {

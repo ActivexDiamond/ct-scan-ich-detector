@@ -1,21 +1,25 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Created on Thu Apr 28 20:26:31 2022
+Created on Tue May 24 20:19:31 2022
 @license: MIT
 
 @author: Dulfiqar 'activexdiamond' H. Al-Safi
 """
 
 ############################## Dependencies ##############################
-from keras import preprocessing, models, layers
+import os
 
-from matplotlib import pyplot
+import cv2
 import numpy
+
+##Visualization
+from matplotlib import pyplot
+
 
 ############################## Custom Modules ##############################
 from preprocessing import process_dataset
-
+import skull_stripping
 ############################## Config ##############################
 import config
 
@@ -24,105 +28,134 @@ import config
 
 ############################## Debug Constants ##############################
 
+##Debug view
+PLOT_COLUMNS = 3
+PLOT_ROWS = 5
+PLOT_SIZE = PLOT_COLUMNS * PLOT_ROWS
+FIG_SIZE = (20, 20)
 
-############################## Execute Preprocessing Pipeline ##############################
+##Debug image
+DEBUG_PATH = os.getcwd() + "/input/head_ct/images/001.png"
+
+debug = True
+
+def section_and_min_max(image, sections, x, y):
+    rows, cols, depth = image.shape
+    section_w = rows / sections
+    section_h = cols / sections
+    s_image = image[int(x * section_w):int((x + 1) * section_w), int(y * section_h):int((y + 1) * section_h), :]
+    s_gray = cv2.cvtColor(s_image, cv2.COLOR_BGR2GRAY)
+    (s_gbb_min, s_gbb_max, s_gbb_min_pos, s_gbb_max_pos) = cv2.minMaxLoc(s_gray)    
+    
+    s_gbb_image = s_image.copy()
+    cv2.circle(s_gbb_image, s_gbb_min_pos, config.BRIGHTNESS_RADIUS, (0, 0, 255), 2)
+    cv2.circle(s_gbb_image, s_gbb_max_pos, config.BRIGHTNESS_RADIUS, (255, 0, 0), 2)        
+    
+    features = (s_gbb_min, s_gbb_max, s_gbb_min_pos, s_gbb_max_pos)
+    return features, s_image, s_gray, s_gbb_image
+    
+
 def main():
     """
     I.C.H. detector entry point.
     """
-    processed_data = process_dataset()
-    (train_images, train_labels) = processed_data[0]
+    ############################## Execute Preprocessing Pipeline ##############################    
+    #processed_data = process_dataset()
+    #(train_images, train_labels) = processed_data[0]
     #(test_images, test_labels) = processed_data[1]
-    (val_images, val_labels) = processed_data[2]
+    #(val_images, val_labels) = processed_data[2]
     #(images, d_raw_images, d_brain_images, d_gray_images) = processed_data[3]
     #dataset_len = len(images)
+    
+    ############################## Feature Extraction ##############################
+    image = cv2.imread(DEBUG_PATH)
+    image = skull_stripping.strip_skull(image, True, False)
+    gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
+    
+    ## Direct min/max.
+    (db_min, db_max, db_min_pos, db_max_pos) = cv2.minMaxLoc(gray)    
 
-    #print(*train_images)
-    #print(*train_labels)
-    #print(*test_images)
-    #print(*test_labels)
-    #print(*val_images)
-    #print(*val_labels)
-    #print(len(images))
+    db_image = image.copy()
+    cv2.circle(db_image, db_min_pos, config.BRIGHTNESS_RADIUS, (0, 0, 255), 2)
+    cv2.circle(db_image, db_max_pos, config.BRIGHTNESS_RADIUS, (255, 0, 0), 2)
+    
+    ## Min/max with gaussian blur.
+    blur_amount = (config.BRIGHTNESS_RADIUS, config.BRIGHTNESS_RADIUS)
+    gray = cv2.GaussianBlur(gray, blur_amount, 0)
+    (gbb_min, gbb_max, gbb_min_pos, gbb_max_pos) = cv2.minMaxLoc(gray)    
 
+    gbb_image = image.copy()
+    cv2.circle(gbb_image, gbb_min_pos, config.BRIGHTNESS_RADIUS, (0, 0, 255), 2)
+    cv2.circle(gbb_image, gbb_max_pos, config.BRIGHTNESS_RADIUS, (255, 0, 0), 2)    
+    
+    
+    sectioned_features = []
+    sectioned_gbb_images = []
+    ## Min/max with sections and gaussian blur.    
+    for x in range(0, 3):
+        for y in range(0, 3):
+            print(x, y)
+            features, _, _, _sectioned_gbb_images = section_and_min_max(image, config.SECTIONS, x, y)                                                                                
+            sectioned_features.append(features)
+            sectioned_gbb_images.append(_sectioned_gbb_images)
+    
+    f32_gray = numpy.float32(gray)
+    harrison_image = cv2.cornerHarris(gray, 2, 3, 0.04)
+        
+    ##Harrison Corner detection.
+        
+    if debug:
+        figure = pyplot.figure(figsize=FIG_SIZE)
+    
+        figure.add_subplot(PLOT_ROWS, PLOT_COLUMNS, 1)
+        pyplot.imshow(harrison_image)
+        pyplot.title("Harrison Corner Detection")
+    
+        figure.add_subplot(PLOT_ROWS, PLOT_COLUMNS, 2)
+        pyplot.imshow(db_image)
+        pyplot.title("Direct Min/Max")    
 
-    siim_model = models.Sequential()
+        figure.add_subplot(PLOT_ROWS, PLOT_COLUMNS, 3)
+        pyplot.imshow(gbb_image)
+        pyplot.title("Gaussian Min/Max")
+        
+        figure.add_subplot(PLOT_ROWS, PLOT_COLUMNS, 4)
+        pyplot.imshow(sectioned_gbb_images[0])
+        pyplot.title("Section (1, 1)")
+            
+        figure.add_subplot(PLOT_ROWS, PLOT_COLUMNS, 5)
+        pyplot.imshow(sectioned_gbb_images[1])
+        pyplot.title("Section (1, 2)")
+            
+        figure.add_subplot(PLOT_ROWS, PLOT_COLUMNS, 6)
+        pyplot.imshow(sectioned_gbb_images[2])
+        pyplot.title("Section (1, 3)")
+            
+        figure.add_subplot(PLOT_ROWS, PLOT_COLUMNS, 7)
+        pyplot.imshow(sectioned_gbb_images[3])
+        pyplot.title("Section (2, 1)")            
+            
+        figure.add_subplot(PLOT_ROWS, PLOT_COLUMNS, 8)
+        pyplot.imshow(sectioned_gbb_images[4])
+        pyplot.title("Section (2, 2)")            
+            
+        figure.add_subplot(PLOT_ROWS, PLOT_COLUMNS, 9)
+        pyplot.imshow(sectioned_gbb_images[5])
+        pyplot.title("Section (2, 3)")            
+            
+        figure.add_subplot(PLOT_ROWS, PLOT_COLUMNS, 10)
+        pyplot.imshow(sectioned_gbb_images[6])
+        pyplot.title("Section (3, 1)")            
+            
+        figure.add_subplot(PLOT_ROWS, PLOT_COLUMNS, 11)
+        pyplot.imshow(sectioned_gbb_images[7])
+        pyplot.title("Section (3, 2)")            
 
-    #Base shape
-    siim_model.add(layers.Conv2D(32, (3, 3), input_shape=config.INPUT_SHAPE))
-    siim_model.add(layers.Activation("relu"))
-
-    #Reduce param count.
-    siim_model.add(layers.MaxPool2D(pool_size=(2, 2)))
-
-    #Finer processing.
-    for _ in range(2):
-        siim_model.add(layers.Conv2D(32, (3, 3)))
-        siim_model.add(layers.Activation("relu"))
-        siim_model.add(layers.MaxPool2D(pool_size=(2, 2)))
-
-    #Dense layers.
-    siim_model.add(layers.Flatten())
-    siim_model.add(layers.Dense(64))
-    siim_model.add(layers.Activation("relu"))
-
-    #Reduce overfitting.
-    siim_model.add(layers.Dropout(0.5))
-
-    #Prepare and grab output.
-    siim_model.add(layers.Dense(1))
-    siim_model.add(layers.Activation("sigmoid"))
-
-    #Compile model.
-    siim_model.compile(loss="binary_crossentropy",
-            optimizer="rmsprop",
-            metrics=["accuracy"])
-            #run_eagerly=True)
-
-    #Prepare training data.
-    train_data_generator = preprocessing.image.ImageDataGenerator(rescale=1 / 255,
-            shear_range=0,
-            zoom_range=0.1,
-            rotation_range=10,
-            width_shift_range=0.1,
-            height_shift_range=0.1,
-            horizontal_flip=True)
-
-    train_generator = train_data_generator.flow(train_images[..., numpy.newaxis],
-            train_labels,
-            batch_size=config.BATCH_SIZE)
-
-    #Prepare validation data.
-    val_data_generator = preprocessing.image.ImageDataGenerator(rescale=1 / 255)
-    val_generator = val_data_generator.flow(val_images[..., numpy.newaxis],
-            val_labels,
-            batch_size=config.BATCH_SIZE)
-
-    #Begin training!
-    history = siim_model.fit_generator(train_generator,
-            steps_per_epoch=len(train_images) // config.BATCH_SIZE,
-            epochs=config.EPOCHS,
-            validation_data=val_generator,
-            validation_steps=len(val_images // config.BATCH_SIZE))
-
-
-    # Plot training & validation accuracy values
-    pyplot.plot(history.history['accuracy'])
-    pyplot.plot(history.history['val_accuracy'])
-    pyplot.title('Model accuracy')
-    pyplot.ylabel('Accuracy')
-    pyplot.xlabel('Epoch')
-    pyplot.legend(['Train', 'Test'], loc='upper left')
-    pyplot.show()
-
-    # Plot training & validation loss values
-    pyplot.plot(history.history['loss'])
-    pyplot.plot(history.history['val_loss'])
-    pyplot.title('Model loss')
-    pyplot.ylabel('Loss')
-    pyplot.xlabel('Epoch')
-    pyplot.legend(['Train', 'Test'], loc='upper left')
-    pyplot.show()
+        figure.add_subplot(PLOT_ROWS, PLOT_COLUMNS, 12)
+        pyplot.imshow(sectioned_gbb_images[8])
+        pyplot.title("Section (3, 3)")            
+            
+        pyplot.show()
 
 if __name__ == "__main__":
     main()

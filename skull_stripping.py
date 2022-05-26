@@ -212,7 +212,7 @@ def strip_skull(image, poor_image_checks=True, debug=True, _threshold=config.THR
 # strip_skull(cv2.imread(os.getcwd() + "/input/head_ct/images/062.png"), True, True)
 # strip_skull(cv2.imread(os.getcwd() + "/input/head_ct/images/068.png"), True, True)
 # strip_skull(cv2.imread(os.getcwd() + "/input/head_ct/images/080.png"), True, True)
-strip_skull(cv2.imread(os.getcwd() + "/input/head_ct/images/095.png"), True, True) #Hard time grabbing all brian.
+#strip_skull(cv2.imread(os.getcwd() + "/input/head_ct/images/095.png"), True, True) #Hard time grabbing all brian.
 # strip_skull(cv2.imread(os.getcwd() + "/input/head_ct/images/113.png"), True, True) #Fails even at threshold=10
 # strip_skull(cv2.imread(os.getcwd() + "/input/head_ct/images/140.png"), True, True)
 # strip_skull(cv2.imread(os.getcwd() + "/input/head_ct/images/141.png"), True, True)
