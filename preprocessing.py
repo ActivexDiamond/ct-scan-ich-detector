@@ -39,7 +39,7 @@ PLOT_IMAGE_OFFSET = 0
 
 PLOT_RATIO_BARS_H = 110
 
-SKULL_STRIPS_TO_DISPLAY = 0
+SKULL_STRIPS_TO_DISPLAY = 250
 
 ############################## Main Function ##############################
 def process_dataset():
@@ -75,7 +75,7 @@ def process_dataset():
         ##Strip skull.
         print(f"Stripping skull from image at index: {i}")
         #The third param should be True if you wish to display plots to the user during processing.
-        image = skull_stripping.strip_skull(image, True, i < SKULL_STRIPS_TO_DISPLAY)            
+        image = skull_stripping.strip_skull(image, True, i < SKULL_STRIPS_TO_DISPLAY, os.path.basename(path))            
         d_brain_images.append(image)
         ##Convert to gray-scale.
         image = cv2.cvtColor(image, config.FINAL_GRAYING_MODE)

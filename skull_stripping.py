@@ -32,7 +32,7 @@ PLOT_SIZE = PLOT_COLUMNS * PLOT_ROWS
 FIG_SIZE = (20, 20)
 
 ############################## Main Function ##############################
-def strip_skull(image, poor_image_checks=True, debug=True, _threshold=config.THRESHOLD):
+def strip_skull(image, poor_image_checks=True, debug=True, debug_name="Unnamed", _threshold=config.THRESHOLD):
     ############### Preprocessing
     ##Convert to high-saturation gray-scale.
     #print(image.shape)
@@ -78,7 +78,7 @@ def strip_skull(image, poor_image_checks=True, debug=True, _threshold=config.THR
                 new_threshold -= config.THRESHOLD_DECREMENTS[i][1]
                 break
         #print(f"Failed to create mask, retrying... Old threshold: {_threshold}\t\tNew threshold: {new_threshold}")
-        return strip_skull(image, poor_image_checks, debug, new_threshold)
+        return strip_skull(image, poor_image_checks, debug, debug_name, new_threshold)
     print(f"Extracting skull with threshold set to: {_threshold}\t\
             [White: {white_pixels*100:.2f}%\t\tBlack: {black_pixels*100:.2f}%]")
 
@@ -137,7 +137,7 @@ def strip_skull(image, poor_image_checks=True, debug=True, _threshold=config.THR
 
         figure.add_subplot(PLOT_ROWS, PLOT_COLUMNS, 1)
         pyplot.imshow(image)
-        pyplot.title("Base")
+        pyplot.title(f"Base ({debug_name})")
 
         figure.add_subplot(PLOT_ROWS, PLOT_COLUMNS, 2)
         pyplot.imshow(gray_image)

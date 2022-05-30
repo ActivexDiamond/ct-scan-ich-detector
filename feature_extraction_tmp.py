@@ -100,7 +100,7 @@ def main():
             sectioned_gbb_images.append(_sectioned_gbb_images)
     
     f32_gray = numpy.float32(gray)
-    harrison_image = cv2.cornerHarris(gray, 2, 3, 0.04)
+    harrison_image = cv2.cornerHarris(f32_gray, 2, 3, 0.04)
         
     ##Harrison Corner detection.
         
