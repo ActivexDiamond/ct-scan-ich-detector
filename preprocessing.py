@@ -44,14 +44,14 @@ import debug_config
 
 ############################## Loading Helpers ##############################
 #`path` should be relative to the CWD.
-def load_images(path):
+def load_images(path, read_flag=cv2.IMREAD_COLOR):
     images = []
     
     image_paths = glob(os.getcwd() + path)
     image_paths = sorted(image_paths)
     for i, path in enumerate(image_paths):
         ##Load image.
-        images.append(cv2.imread(path))
+        images.append(cv2.imread(path, read_flag))
     return images
 
 #`path` should be relative to the CWD.
@@ -238,7 +238,7 @@ def compute_fo_all(image):
 
     #Wrap all of 1st-order stats into a single dictionary for tidiness.
     features = {
-        "extrema": stats.extrema,
+        #"extrema": stats.extrema,
         "count": stats.count,
         "sum": stats.sum,
         "sum2": stats.sum2,

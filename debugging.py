@@ -52,27 +52,27 @@ def plot_features(name, image, features):
     pyplot.plot(features["sfta"])
     pyplot.title("SFTA")
     
-    figure.add_subplot(debug_config.PLOT_ROWS, debug_config.PLOT_COLUMNS, 4)
-    pyplot.imshow(features["hog_image"], cmap="gray")
-    pyplot.title("HOG Image")
+    #figure.add_subplot(debug_config.PLOT_ROWS, debug_config.PLOT_COLUMNS, 4)
+    #pyplot.imshow(features["hog_image"], cmap="gray")
+    #pyplot.title("HOG Image")
 
-    figure.add_subplot(debug_config.PLOT_ROWS, debug_config.PLOT_COLUMNS, 5)
-    d_display_hog_image = cv2.convertScaleAbs(features["hog_image"], alpha=3, beta=100)
-    pyplot.imshow(d_display_hog_image, cmap="gray")
-    pyplot.title("(Debug-Contrast - Viewing Only)")
+    #figure.add_subplot(debug_config.PLOT_ROWS, debug_config.PLOT_COLUMNS, 4)
+    #d_display_hog_image = cv2.convertScaleAbs(features["hog_image"], alpha=3, beta=100)
+    #pyplot.imshow(d_display_hog_image, cmap="gray")
+    #pyplot.title("(Debug-Contrast - Viewing Only)")
     
-    figure.add_subplot(debug_config.PLOT_ROWS, debug_config.PLOT_COLUMNS, 6)
+    figure.add_subplot(debug_config.PLOT_ROWS, debug_config.PLOT_COLUMNS, 4)
     pyplot.plot(features["hog"])
     pyplot.title("HOG")
 
-    figure.add_subplot(debug_config.PLOT_ROWS, debug_config.PLOT_COLUMNS, 7)
+    figure.add_subplot(debug_config.PLOT_ROWS, debug_config.PLOT_COLUMNS, 5)
     line = 1
     for k, v in features["glcm"].items():
         pyplot.text(0.01, 0.15 * line, f"{k} = {v}", size=20)
         line += 1
     pyplot.title("GLCM")
 
-    figure.add_subplot(debug_config.PLOT_ROWS, debug_config.PLOT_COLUMNS, 8)
+    figure.add_subplot(debug_config.PLOT_ROWS, debug_config.PLOT_COLUMNS, 7)
     line = 1
     for k, v in features["fo"].items():
         pyplot.text(0.01, 0.1 * line, f"{k} = {v}", size=15)

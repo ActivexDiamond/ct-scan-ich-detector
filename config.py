@@ -44,6 +44,10 @@ else:
     IMAGE_RELATIVE_PATH = "/input/head_ct/images/*.png"
     LABEL_RELATIVE_PATH = "/input/labels.csv"
 
+##Output paths
+IMAGE_OUTPUT_PATH = "/output/images/"
+FEATURE_OUTPUT_PATH = "/output/extracted_features.h5"
+
 ##Preprocessing configs.
 FINAL_GRAYING_MODE = cv2.COLOR_BGR2GRAY
 
@@ -57,11 +61,37 @@ TEST_RATIO = 0.2                    #How much of the dataset to use for testing.
 VALIDATION_RATIO = 0.5              #How much of the trainning dataset to use for validation. float ; [0, 1]
 
 ############################## Feature Extraction ##############################
-BRIGHTNESS_RADIUS = 51             #Must be odd.
+BRIGHTNESS_RADIUS = 200             #Must be odd.
 SECTIONS = 3
 
 ############################## M.L. Model ##############################
+N_COMPONENTS_MAX = 45
 
+#With shuffle on:
+#   With all features enabled:
+#     N_COMPS=48 got acc=%90.0
+#
+#   With all features `-hog` enabled:
+#      N_COMPS=125 got acc=%85.0
+#
+#   With all features `-lbp` enabled:
+#      N_COMPS=148 got acc=%90.0
+#
+#   With all features `-hog AND -lbp` enabled:
+#      N_COMPS=25 got acc=%85.0
+
+#With shuffle off:
+#   With all features enabled:
+#     N_COMPS=88 got acc=%85.0
+#
+#   With all features `-hog` enabled:
+#      N_COMPS=31 got acc=%80.0
+#
+#   With all features `-lbp` enabled:
+#      N_COMPS=104 got acc=%90.0
+#
+#   With all features `-hog AND -lbp` enabled:
+#      N_COMPS=25 got acc=%85.0
 
 ############################## Metadata ##############################
 _METADATA = {

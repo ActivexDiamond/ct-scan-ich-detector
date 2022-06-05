@@ -32,7 +32,7 @@ PLOT_IMAGE_OFFSET = 0
 
 PLOT_RATIO_BARS_H = 110
 
-SKULL_STRIPS_TO_DISPLAY = 250
+SKULL_STRIPS_TO_DISPLAY = 3
 
 ############################## Misc. ,##############################
 
