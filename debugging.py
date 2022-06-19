@@ -8,6 +8,7 @@ Created on Sat Apr 30 04:53:23 2022
 
 ############################## Dependencies ##############################
 import timeit
+import sys
 
 import cv2
 
@@ -81,10 +82,17 @@ def plot_features(name, image, features):
 
     pyplot.show()
         
-
+class Logger(object):
+    def __init__(self, filename="last_run.log"):
+        self.console = sys.stdout
+        self.log_file = open(filename, "w")
+        
+    def log(self, msg):
+        msg = str(msg) + "\n"
+        self.console.write(msg)
+        self.log_file.write(msg)
 
 #detectable fail         6%
 #undetectabl fail        0.5%
 #?                       1
 #total                   200
-

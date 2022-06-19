@@ -30,7 +30,7 @@ import PIL
 import PIL.ImageStat
 
 ##Dataset Mangement
-from sklearn.model_selection import train_test_split
+import sklearn.model_selection
 
 ##Visualization
 from matplotlib import pyplot
@@ -42,7 +42,7 @@ import debugging
 import config
 import debug_config
 
-############################## Loading Helpers ##############################
+############################## Helpers ##############################
 #`path` should be relative to the CWD.
 def load_images(path, read_flag=cv2.IMREAD_COLOR):
     images = []
@@ -60,6 +60,13 @@ def load_labels(path):
     labels = metadata[" hemorrhage"].tolist()
     return labels 
 
+def split(feature_vector, label_vector):
+    return sklearn.model_selection.train_test_split(
+            feature_vector,
+            label_vector,
+            test_size=config.TEST_RATIO,
+            random_state=config.SKLEARN_SHUFFLE_SEED)
+    
 ############################## Strip Skull ##############################
 def strip_skull(image, poor_image_checks=True, debug=True, debug_name="Unnamed", _threshold=config.THRESHOLD):
     ############### Preprocessing

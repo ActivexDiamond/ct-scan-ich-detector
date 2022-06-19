@@ -98,7 +98,7 @@ _METADATA = {
     "TITLE": "C.T. Scan I.C.H. Detector",
     "DESCRIPTION": "An M.L. model capable of detecting the precense of I.C.H. in 2-dimensional C.T. scans of the human brain.",
     "TYPE": "CLI",
-    "VERSION": "dev-1.7.0",
+    "VERSION": "dev-1.10.0",
     "LICENSE": "MIT",
     "AUTHOR": "Dulfiqar 'activexdiamond' H. Al-Safi"
 }
