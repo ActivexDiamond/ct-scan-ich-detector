@@ -1,0 +1,226 @@
+len(mean)=1000
+len(std)=1000
+len(var)=1000
+patches.shape=(1000, 3, 3)
+patch_size=(x, 3)
+Feature template={feature_template}
+
+=====> Testing: ['patches_mean']
+===> Feature subset testing at step: 1/2048
+Testing model.
+================= About to train.
+================= About to predict.
+Got accuracy of <acc=70.0000%> with <n_comps=50>.		Took <total_dur=0.8587333s> in total.<training_dur=0.7945923s>; <prediction_dur=0.0641409s>).
+
+=====> Testing: ['patches_std']
+===> Feature subset testing at step: 2/2048
+Testing model.
+================= About to train.
+================= About to predict.
+Got accuracy of <acc=50.0000%> with <n_comps=50>.		Took <total_dur=0.9699704s> in total.<training_dur=0.9073111s>; <prediction_dur=0.0626593s>).
+
+=====> Testing: ['patches_mean', 'patches_std']
+===> Feature subset testing at step: 3/2048
+Testing model.
+================= About to train.
+================= About to predict.
+Got accuracy of <acc=65.0000%> with <n_comps=50>.		Took <total_dur=0.8807911s> in total.<training_dur=0.8185262s>; <prediction_dur=0.0622648s>).
+
+=====> Testing: ['patches_var']
+===> Feature subset testing at step: 4/2048
+Testing model.
+================= About to train.
+================= About to predict.
+Got accuracy of <acc=52.5000%> with <n_comps=50>.		Took <total_dur=0.8905860s> in total.<training_dur=0.8279894s>; <prediction_dur=0.0625965s>).
+
+=====> Testing: ['patches_mean', 'patches_var']
+===> Feature subset testing at step: 5/2048
+Testing model.
+================= About to train.
+================= About to predict.
+Got accuracy of <acc=70.0000%> with <n_comps=50>.		Took <total_dur=0.8658621s> in total.<training_dur=0.8052141s>; <prediction_dur=0.0606479s>).
+
+=====> Testing: ['patches_std', 'patches_var']
+===> Feature subset testing at step: 6/2048
+Testing model.
+================= About to train.
+================= About to predict.
+Got accuracy of <acc=45.0000%> with <n_comps=50>.		Took <total_dur=0.8605230s> in total.<training_dur=0.7984521s>; <prediction_dur=0.0620709s>).
+
+=====> Testing: ['patches_mean', 'patches_std', 'patches_var']
+===> Feature subset testing at step: 7/2048
+Testing model.
+================= About to train.
+================= About to predict.
+Got accuracy of <acc=72.5000%> with <n_comps=50>.		Took <total_dur=0.9682209s> in total.<training_dur=0.8761301s>; <prediction_dur=0.0920908s>).
+
+=====> Testing: ['lbp']
+===> Feature subset testing at step: 8/2048
+Testing model.
+================= About to train.
+================= About to predict.
+Got accuracy of <acc=55.0000%> with <n_comps=50>.		Took <total_dur=0.8333111s> in total.<training_dur=0.7714584s>; <prediction_dur=0.0618527s>).
+
+=====> Testing: ['patches_mean', 'lbp']
+===> Feature subset testing at step: 9/2048
+Testing model.
+================= About to train.
+================= About to predict.
+Got accuracy of <acc=60.0000%> with <n_comps=50>.		Took <total_dur=0.8366978s> in total.<training_dur=0.7656665s>; <prediction_dur=0.0710313s>).
+
+=====> Testing: ['patches_std', 'lbp']
+===> Feature subset testing at step: 10/2048
+Testing model.
+================= About to train.
+================= About to predict.
+Got accuracy of <acc=62.5000%> with <n_comps=50>.		Took <total_dur=0.8420347s> in total.<training_dur=0.7803186s>; <prediction_dur=0.0617161s>).
+
+=====> Testing: ['patches_mean', 'patches_std', 'lbp']
+===> Feature subset testing at step: 11/2048
+Testing model.
+================= About to train.
+================= About to predict.
+Got accuracy of <acc=57.5000%> with <n_comps=50>.		Took <total_dur=0.9781795s> in total.<training_dur=0.9679221s>; <prediction_dur=0.0102574s>).
+
+=====> Testing: ['patches_var', 'lbp']
+===> Feature subset testing at step: 12/2048
+Testing model.
+================= About to train.
+================= About to predict.
+Got accuracy of <acc=57.5000%> with <n_comps=50>.		Took <total_dur=0.9685092s> in total.<training_dur=0.9582188s>; <prediction_dur=0.0102904s>).
+
+=====> Testing: ['patches_mean', 'patches_var', 'lbp']
+===> Feature subset testing at step: 13/2048
+Testing model.
+================= About to train.
+================= About to predict.
+Got accuracy of <acc=57.5000%> with <n_comps=50>.		Took <total_dur=0.9491315s> in total.<training_dur=0.9389248s>; <prediction_dur=0.0102067s>).
+
+=====> Testing: ['patches_std', 'patches_var', 'lbp']
+===> Feature subset testing at step: 14/2048
+Testing model.
+================= About to train.
+================= About to predict.
+Got accuracy of <acc=60.0000%> with <n_comps=50>.		Took <total_dur=0.9301383s> in total.<training_dur=0.8693803s>; <prediction_dur=0.0607580s>).
+
+=====> Testing: ['patches_mean', 'patches_std', 'patches_var', 'lbp']
+===> Feature subset testing at step: 15/2048
+Testing model.
+================= About to train.
+================= About to predict.
+Got accuracy of <acc=62.5000%> with <n_comps=50>.		Took <total_dur=0.8489512s> in total.<training_dur=0.7863991s>; <prediction_dur=0.0625521s>).
+
+=====> Testing: ['hog']
+===> Feature subset testing at step: 16/2048
+Testing model.
+================= About to train.
+================= About to predict.
+Got accuracy of <acc=70.0000%> with <n_comps=50>.		Took <total_dur=0.8295566s> in total.<training_dur=0.7620733s>; <prediction_dur=0.0674833s>).
+
+=====> Testing: ['patches_mean', 'hog']
+===> Feature subset testing at step: 17/2048
+Testing model.
+================= About to train.
+================= About to predict.
+Got accuracy of <acc=62.5000%> with <n_comps=50>.		Took <total_dur=0.8422761s> in total.<training_dur=0.7790059s>; <prediction_dur=0.0632703s>).
+
+=====> Testing: ['patches_std', 'hog']
+===> Feature subset testing at step: 18/2048
+Testing model.
+================= About to train.
+================= About to predict.
+Got accuracy of <acc=70.0000%> with <n_comps=50>.		Took <total_dur=0.8319088s> in total.<training_dur=0.7686354s>; <prediction_dur=0.0632734s>).
+
+=====> Testing: ['patches_mean', 'patches_std', 'hog']
+===> Feature subset testing at step: 19/2048
+Testing model.
+================= About to train.
+================= About to predict.
+Got accuracy of <acc=62.5000%> with <n_comps=50>.		Took <total_dur=0.8340085s> in total.<training_dur=0.7720354s>; <prediction_dur=0.0619731s>).
+
+=====> Testing: ['patches_var', 'hog']
+===> Feature subset testing at step: 20/2048
+Testing model.
+================= About to train.
+================= About to predict.
+Got accuracy of <acc=70.0000%> with <n_comps=50>.		Took <total_dur=0.8382098s> in total.<training_dur=0.7760252s>; <prediction_dur=0.0621846s>).
+
+=====> Testing: ['patches_mean', 'patches_var', 'hog']
+===> Feature subset testing at step: 21/2048
+Testing model.
+================= About to train.
+================= About to predict.
+Got accuracy of <acc=62.5000%> with <n_comps=50>.		Took <total_dur=0.8384277s> in total.<training_dur=0.7767015s>; <prediction_dur=0.0617262s>).
+
+=====> Testing: ['patches_std', 'patches_var', 'hog']
+===> Feature subset testing at step: 22/2048
+Testing model.
+================= About to train.
+================= About to predict.
+Got accuracy of <acc=70.0000%> with <n_comps=50>.		Took <total_dur=0.8495650s> in total.<training_dur=0.7873260s>; <prediction_dur=0.0622390s>).
+
+=====> Testing: ['patches_mean', 'patches_std', 'patches_var', 'hog']
+===> Feature subset testing at step: 23/2048
+Testing model.
+================= About to train.
+================= About to predict.
+Got accuracy of <acc=65.0000%> with <n_comps=50>.		Took <total_dur=0.8375279s> in total.<training_dur=0.7767495s>; <prediction_dur=0.0607785s>).
+
+=====> Testing: ['lbp', 'hog']
+===> Feature subset testing at step: 24/2048
+Testing model.
+================= About to train.
+================= About to predict.
+Got accuracy of <acc=70.0000%> with <n_comps=50>.		Took <total_dur=0.6774750s> in total.<training_dur=0.6662172s>; <prediction_dur=0.0112578s>).
+
+=====> Testing: ['patches_mean', 'lbp', 'hog']
+===> Feature subset testing at step: 25/2048
+Testing model.
+================= About to train.
+================= About to predict.
+Got accuracy of <acc=60.0000%> with <n_comps=50>.		Took <total_dur=0.6348030s> in total.<training_dur=0.6249732s>; <prediction_dur=0.0098298s>).
+
+=====> Testing: ['patches_std', 'lbp', 'hog']
+===> Feature subset testing at step: 26/2048
+Testing model.
+================= About to train.
+================= About to predict.
+Got accuracy of <acc=65.0000%> with <n_comps=50>.		Took <total_dur=0.8154757s> in total.<training_dur=0.7849362s>; <prediction_dur=0.0305394s>).
+
+=====> Testing: ['patches_mean', 'patches_std', 'lbp', 'hog']
+===> Feature subset testing at step: 27/2048
+Testing model.
+================= About to train.
+================= About to predict.
+Got accuracy of <acc=67.5000%> with <n_comps=50>.		Took <total_dur=0.8082127s> in total.<training_dur=0.7587477s>; <prediction_dur=0.0494650s>).
+
+=====> Testing: ['patches_var', 'lbp', 'hog']
+===> Feature subset testing at step: 28/2048
+Testing model.
+================= About to train.
+================= About to predict.
+Got accuracy of <acc=65.0000%> with <n_comps=50>.		Took <total_dur=0.8369845s> in total.<training_dur=0.7775080s>; <prediction_dur=0.0594765s>).
+
+=====> Testing: ['patches_mean', 'patches_var', 'lbp', 'hog']
+===> Feature subset testing at step: 29/2048
+Testing model.
+================= About to train.
+================= About to predict.
+Got accuracy of <acc=62.5000%> with <n_comps=50>.		Took <total_dur=0.7532026s> in total.<training_dur=0.7427947s>; <prediction_dur=0.0104079s>).
+
+=====> Testing: ['patches_std', 'patches_var', 'lbp', 'hog']
+===> Feature subset testing at step: 30/2048
+Testing model.
+================= About to train.
+================= About to predict.
+Got accuracy of <acc=65.0000%> with <n_comps=50>.		Took <total_dur=0.8483432s> in total.<training_dur=0.7851276s>; <prediction_dur=0.0632157s>).
+
+=====> Testing: ['patches_mean', 'patches_std', 'patches_var', 'lbp', 'hog']
+===> Feature subset testing at step: 31/2048
+Testing model.
+================= About to train.
+================= About to predict.
+Got accuracy of <acc=62.5000%> with <n_comps=50>.		Took <total_dur=0.8049378s> in total.<training_dur=0.7695205s>; <prediction_dur=0.0354173s>).
+
+=====> Testing: ['sfta']
+===> Feature subset testing at step: 32/2048

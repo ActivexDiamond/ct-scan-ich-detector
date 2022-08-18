@@ -10,14 +10,8 @@ Created on Fri Jun 17 19:21:14 2022
 ############################## Dependencies ##############################
 ##Path utils for image loading.
 import os
-from glob import glob
-from pathlib import Path
-
-##Maths
-import numpy
 
 ## Data serialization and deserialization
-import pandas
 import deepdish
 
 ##Image manipulation.
@@ -25,11 +19,9 @@ import cv2
 
 ############################## Custom Modules ##############################
 import preprocessing
-import debugging 
 
 ############################## Config ##############################
 import config
-import debug_config
 
 ############################## Conversion Helper ##############################
 def main():

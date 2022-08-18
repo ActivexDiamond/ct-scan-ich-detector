@@ -11,14 +11,12 @@ Created on Mon May 16 06:02:56 2022
 ##Path utils for image loading.
 import os
 from glob import glob
-from pathlib import Path
 
 ##Maths
 import math
 import numpy
 
 ##RNG
-import random
 
 #CSV importing and other filetype manipulation.
 import pandas
@@ -36,7 +34,6 @@ import sklearn.model_selection
 from matplotlib import pyplot
 
 ############################## Custom Modules ##############################
-import debugging
 
 ############################## Config ##############################
 import config
@@ -60,11 +57,11 @@ def load_labels(path):
     labels = metadata[" hemorrhage"].tolist()
     return labels 
 
-def split(feature_vector, label_vector):
+def split(feature_vector, label_vector, ratio):
     return sklearn.model_selection.train_test_split(
             feature_vector,
             label_vector,
-            test_size=config.TEST_RATIO,
+            test_size=ratio,
             random_state=config.SKLEARN_SHUFFLE_SEED)
     
 ############################## Strip Skull ##############################

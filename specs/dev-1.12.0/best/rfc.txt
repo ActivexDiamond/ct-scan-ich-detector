@@ -1,0 +1,36 @@
+The top 1 results gotten were as follows (in descending order):
+value			| pos		| config			| full-text
+acc=80.000000		| 1		|  ['glcm', 'fo', 'hog']		| Got accuracy of <acc=80.0000%> with <n_comps=109>.		Took <total_dur=1.9202775s> in total. (<regression_dur=1.0201469s>; <training_dur=0.8380748s>; <prediction_dur=0.0620559s>).
+acc=77.500000		| 1		|  ['lbp', 'hog']		| Got accuracy of <acc=77.5000%> with <n_comps=90>.		Took <total_dur=3.2472355s> in total. (<regression_dur=2.3063086s>; <training_dur=0.9280141s>; <prediction_dur=0.0129128s>).
+acc=82.500000		| 1		|  ['sfta']		| Got accuracy of <acc=82.5000%> with <n_comps=30>.		Took <total_dur=0.8721755s> in total. (<regression_dur=0.0113297s>; <training_dur=0.7991244s>; <prediction_dur=0.0617214s>).
+acc=87.500000		| 1		|  ['glcm', 'fo', 'sfta']		| Got accuracy of <acc=87.5000%> with <n_comps=37>.		Took <total_dur=0.8094392s> in total. (<regression_dur=0.0129397s>; <training_dur=0.7325051s>; <prediction_dur=0.0639944s>).
+acc=80.000000		| 1		|  ['fo', 'hog']		| Got accuracy of <acc=80.0000%> with <n_comps=191>.		Took <total_dur=1.7613329s> in total. (<regression_dur=0.7771962s>; <training_dur=0.9219087s>; <prediction_dur=0.0622280s>).
+acc=72.500000		| 1		|  ['fo']		| Got accuracy of <acc=72.5000%> with <n_comps=1>.		Took <total_dur=0.8626351s> in total. (<regression_dur=0.0131495s>; <training_dur=0.7873007s>; <prediction_dur=0.0621850s>).
+acc=80.000000		| 1		|  ['fo', 'sfta', 'lbp', 'hog']		| Got accuracy of <acc=80.0000%> with <n_comps=68>.		Took <total_dur=2.4400214s> in total. (<regression_dur=1.5811567s>; <training_dur=0.7971375s>; <prediction_dur=0.0617272s>).
+acc=75.000000		| 1		|  ['glcm', 'sfta', 'lbp']		| Got accuracy of <acc=75.0000%> with <n_comps=70>.		Took <total_dur=1.9011691s> in total. (<regression_dur=1.0399970s>; <training_dur=0.8000615s>; <prediction_dur=0.0611106s>).
+acc=75.000000		| 1		|  ['glcm', 'lbp']		| Got accuracy of <acc=75.0000%> with <n_comps=81>.		Took <total_dur=1.9120441s> in total. (<regression_dur=0.9612008s>; <training_dur=0.8842438s>; <prediction_dur=0.0665994s>).
+acc=82.500000		| 1		|  ['glcm', 'sfta', 'lbp', 'hog']		| Got accuracy of <acc=82.5000%> with <n_comps=143>.		Took <total_dur=4.5235994s> in total. (<regression_dur=3.6087646s>; <training_dur=0.9017534s>; <prediction_dur=0.0130814s>).
+acc=70.000000		| 1		|  ['glcm', 'fo', 'lbp']		| Got accuracy of <acc=70.0000%> with <n_comps=45>.		Took <total_dur=1.5580476s> in total. (<regression_dur=0.7459258s>; <training_dur=0.7507402s>; <prediction_dur=0.0613816s>).
+acc=80.000000		| 1		|  ['fo', 'sfta', 'hog']		| Got accuracy of <acc=80.0000%> with <n_comps=70>.		Took <total_dur=1.9213643s> in total. (<regression_dur=0.8704171s>; <training_dur=1.0294648s>; <prediction_dur=0.0214824s>).
+acc=90.000000		| 1		|  ['glcm', 'sfta']		| Got accuracy of <acc=90.0000%> with <n_comps=14>.		Took <total_dur=0.7434509s> in total. (<regression_dur=0.0120782s>; <training_dur=0.6695594s>; <prediction_dur=0.0618134s>).
+acc=82.500000		| 1		|  ['sfta', 'hog']		| Got accuracy of <acc=82.5000%> with <n_comps=183>.		Took <total_dur=1.7953506s> in total. (<regression_dur=0.7811067s>; <training_dur=0.9487062s>; <prediction_dur=0.0655377s>).
+acc=80.000000		| 1		|  ['glcm', 'fo', 'lbp', 'hog']		| Got accuracy of <acc=80.0000%> with <n_comps=61>.		Took <total_dur=2.7709091s> in total. (<regression_dur=1.8156055s>; <training_dur=0.9423650s>; <prediction_dur=0.0129386s>).
+acc=77.500000		| 1		|  ['fo', 'lbp', 'hog']		| Got accuracy of <acc=77.5000%> with <n_comps=55>.		Took <total_dur=2.6096928s> in total. (<regression_dur=1.6532802s>; <training_dur=0.9460411s>; <prediction_dur=0.0103715s>).
+acc=80.000000		| 1		|  ['glcm', 'fo']		| Got accuracy of <acc=80.0000%> with <n_comps=10>.		Took <total_dur=0.7531782s> in total. (<regression_dur=0.0098161s>; <training_dur=0.6795164s>; <prediction_dur=0.0638457s>).
+acc=85.000000		| 1		|  ['glcm', 'fo', 'sfta', 'hog']		| Got accuracy of <acc=85.0000%> with <n_comps=72>.		Took <total_dur=1.9627338s> in total. (<regression_dur=0.9119676s>; <training_dur=0.9916502s>; <prediction_dur=0.0591159s>).
+acc=90.000000		| 1		|  ['fo', 'sfta']		| Got accuracy of <acc=90.0000%> with <n_comps=14>.		Took <total_dur=0.8854033s> in total. (<regression_dur=0.0186921s>; <training_dur=0.7991433s>; <prediction_dur=0.0675679s>).
+acc=80.000000		| 1		|  ['fo', 'sfta', 'lbp']		| Got accuracy of <acc=80.0000%> with <n_comps=153>.		Took <total_dur=2.4464190s> in total. (<regression_dur=1.4844211s>; <training_dur=0.8984893s>; <prediction_dur=0.0635086s>).
+acc=80.000000		| 1		|  ['sfta', 'lbp', 'hog']		| Got accuracy of <acc=80.0000%> with <n_comps=97>.		Took <total_dur=3.5259670s> in total. (<regression_dur=2.5853296s>; <training_dur=0.9231495s>; <prediction_dur=0.0174879s>).
+acc=80.000000		| 1		|  ['hog']		| Got accuracy of <acc=80.0000%> with <n_comps=37>.		Took <total_dur=1.5613892s> in total. (<regression_dur=0.7182176s>; <training_dur=0.7751997s>; <prediction_dur=0.0679720s>).
+acc=82.500000		| 1		|  ['glcm', 'sfta', 'hog']		| Got accuracy of <acc=82.5000%> with <n_comps=82>.		Took <total_dur=1.9615954s> in total. (<regression_dur=1.0738775s>; <training_dur=0.8244964s>; <prediction_dur=0.0632215s>).
+acc=82.500000		| 1		|  ['glcm', 'fo', 'sfta', 'lbp', 'hog']		| Got accuracy of <acc=82.5000%> with <n_comps=103>.		Took <total_dur=2.9941612s> in total. (<regression_dur=2.0682559s>; <training_dur=0.8619098s>; <prediction_dur=0.0639954s>).
+acc=82.500000		| 1		|  ['glcm', 'hog']		| Got accuracy of <acc=82.5000%> with <n_comps=49>.		Took <total_dur=1.4414083s> in total. (<regression_dur=0.6190735s>; <training_dur=0.7609849s>; <prediction_dur=0.0613499s>).
+acc=77.500000		| 1		|  ['glcm', 'lbp', 'hog']		| Got accuracy of <acc=77.5000%> with <n_comps=68>.		Took <total_dur=2.8017473s> in total. (<regression_dur=1.8349155s>; <training_dur=0.9546737s>; <prediction_dur=0.0121581s>).
+acc=72.500000		| 1		|  ['sfta', 'lbp']		| Got accuracy of <acc=72.5000%> with <n_comps=71>.		Took <total_dur=1.7205523s> in total. (<regression_dur=0.8199323s>; <training_dur=0.8379765s>; <prediction_dur=0.0626435s>).
+acc=75.000000		| 1		|  ['fo', 'lbp']		| Got accuracy of <acc=75.0000%> with <n_comps=158>.		Took <total_dur=2.3529549s> in total. (<regression_dur=1.4039759s>; <training_dur=0.8861813s>; <prediction_dur=0.0627977s>).
+acc=77.500000		| 1		|  ['lbp']		| Got accuracy of <acc=77.5000%> with <n_comps=72>.		Took <total_dur=1.7306678s> in total. (<regression_dur=0.8596661s>; <training_dur=0.8075839s>; <prediction_dur=0.0634178s>).
+acc=77.500000		| 1		|  ['glcm', 'fo', 'sfta', 'lbp']		| Got accuracy of <acc=77.5000%> with <n_comps=155>.		Took <total_dur=2.3233573s> in total. (<regression_dur=1.3463993s>; <training_dur=0.9157161s>; <prediction_dur=0.0612419s>).
+acc=75.000000		| 1		|  ['glcm']		| Got accuracy of <acc=75.0000%> with <n_comps=4>.		Took <total_dur=0.7130756s> in total. (<regression_dur=0.0087853s>; <training_dur=0.6427705s>; <prediction_dur=0.0615198s>).
+
+===============
+

@@ -1,0 +1,4 @@
+len(mean)=1000
+len(std)=0
+len(var)=1000
+patches.shape=(1000, 3, 3)

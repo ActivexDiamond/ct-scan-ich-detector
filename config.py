@@ -8,12 +8,11 @@ Created on Mon May 16 19:27:07 2022
 """
 
 ############################## Dependencies ##############################
-import os
-
 import cv2
 
+import tensorflow.keras.optimizers
+
 ############################## Global Debugging ##############################
-_USE_DUMMY_PATHS = False
 
 ############################## Skull Stripping ##############################
 GRAYING_MODE = cv2.COLOR_BGR2GRAY
@@ -37,16 +36,13 @@ THRESHOLD_DECREMENTS = [
 
 ############################## Main Preprocessing Pipeline ##############################
 ##File paths.
-if _USE_DUMMY_PATHS:
-    IMAGE_RELATIVE_PATH = "/dummy_input/head_ct/images/*.png"
-    LABEL_RELATIVE_PATH = "/dummy_input/labels.csv"
-else:
-    IMAGE_RELATIVE_PATH = "/input/head_ct/images/*.png"
-    LABEL_RELATIVE_PATH = "/input/labels.csv"
+IMAGE_RELATIVE_PATH = "/output/images/"
+LABEL_RELATIVE_PATH = "/dummy_input/labels.csv"
 
 ##Output paths
-IMAGE_OUTPUT_PATH = "/output/images/"
+IMAGE_OUTPUT_PATH = "/input/head_ct/images/*.png"
 FEATURE_OUTPUT_PATH = "/output/extracted_features.h5"
+RAW_FEATURE_OUTPUT_PATH = "/output/raw_extracted_features.h5"
 
 ##Preprocessing configs.
 FINAL_GRAYING_MODE = cv2.COLOR_BGR2GRAY
@@ -55,17 +51,59 @@ IMAGE_W = 128
 IMAGE_H = 128
 IMAGE_SIZE = (IMAGE_W, IMAGE_H)
 
-SKLEARN_SHUFFLE_SEED = 42
-RANDOM_SEED = 1337
+SKLEARN_SHUFFLE_SEED = 44
+RANDOM_SEED = 44
+NUMPY_SEED = 450
 TEST_RATIO = 0.2                    #How much of the dataset to use for testing. float ; [0, 1]
-VALIDATION_RATIO = 0.5              #How much of the trainning dataset to use for validation. float ; [0, 1]
+VALIDATION_RATIO = 0.1              #How much of the trainning dataset to use for validation. float ; [0, 1]
 
 ############################## Feature Extraction ##############################
 BRIGHTNESS_RADIUS = 200             #Must be odd.
 SECTIONS = 3
 
 ############################## M.L. Model ##############################
-N_COMPONENTS_MAX = 45
+##Input
+#INPUT_SHAPE = (144, 1)
+
+##Conv2D
+CONVOLUTION_LAYERS_FILTERS = 32
+CONVOLUTION_LAYERS_COUNT = 3
+CONVOLUTION_LAYERS_POOL_SIZE = (2, 2)
+
+##Full Layers
+FULL_LAYERS_DENSITY = 64
+
+##Conv2D & Full Layers
+ACTIVATION_LAYER = "relu"
+
+##Dropout
+DROPOUT_COEFFICIENT = 0.5
+
+##Output
+OUTPUT_DENSITY = 1
+OUTPUT_ACTIVATION_LAYER = "sigmoid"
+
+##Compilation
+LOSS = "binary_crossentropy"
+OPTIMIZER = tensorflow.keras.optimizers.SGD(learning_rate=0.01)
+
+##Pre-Training
+RESCALE = 1 / 255
+SHEAR = 0
+ZOOM = 0.1
+ROTATION = 10
+SHIFT_RANGE = 0.1
+HORIZONTAL_FLIP = True
+
+##Training
+EPOCHS = 200
+BATCH_SIZE = 160
+NN_VERBOSITY = 1
+##Debug
+D_RUN_EAGERLY = False
+
+############################## PCA ##############################
+N_COMPONENTS_MAX = 199
 
 #With shuffle on:
 #   With all features enabled:
@@ -98,7 +136,7 @@ _METADATA = {
     "TITLE": "C.T. Scan I.C.H. Detector",
     "DESCRIPTION": "An M.L. model capable of detecting the precense of I.C.H. in 2-dimensional C.T. scans of the human brain.",
     "TYPE": "CLI",
-    "VERSION": "dev-1.10.0",
+    "VERSION": "dev-x",
     "LICENSE": "MIT",
     "AUTHOR": "Dulfiqar 'activexdiamond' H. Al-Safi"
 }

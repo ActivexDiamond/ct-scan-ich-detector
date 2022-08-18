@@ -10,8 +10,6 @@ Created on Sat Apr 30 04:53:23 2022
 import timeit
 import sys
 
-import cv2
-
 from matplotlib import pyplot
 
 ############################## Config ##############################

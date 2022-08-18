@@ -1,0 +1,165 @@
+Testing all possible configurations for the following features:
+['glcm', 'fo', 'sfta', 'lbp', 'hog']
+
+
+=====> Testing: ['glcm']
+===> Feature subset testing at step: 1/32
+Got accuracy of <acc=57.5000%> with <n_comps=1>.		Took <total_dur=0.0627541s> in total. (<regression_dur=0.0076973s>; <training_dur=0.0519749s>; <prediction_dur=0.0030819s>).
+Got accuracy of <acc=82.5000%> with <n_comps=2>.		Took <total_dur=0.0736635s> in total. (<regression_dur=0.0124490s>; <training_dur=0.0583772s>; <prediction_dur=0.0028372s>).
+Got accuracy of <acc=80.0000%> with <n_comps=3>.		Took <total_dur=0.0622871s> in total. (<regression_dur=0.0126763s>; <training_dur=0.0471425s>; <prediction_dur=0.0024682s>).
+Got accuracy of <acc=82.5000%> with <n_comps=4>.		Took <total_dur=0.0685733s> in total. (<regression_dur=0.0133177s>; <training_dur=0.0528766s>; <prediction_dur=0.0023790s>).
+Got accuracy of <acc=80.0000%> with <n_comps=5>.		Took <total_dur=0.0633631s> in total. (<regression_dur=0.0129207s>; <training_dur=0.0479903s>; <prediction_dur=0.0024521s>).
+Got accuracy of <acc=80.0000%> with <n_comps=6>.		Took <total_dur=0.0613701s> in total. (<regression_dur=0.0125036s>; <training_dur=0.0464115s>; <prediction_dur=0.0024550s>).
+Got accuracy of <acc=80.0000%> with <n_comps=7>.		Took <total_dur=0.0607241s> in total. (<regression_dur=0.0123257s>; <training_dur=0.0460213s>; <prediction_dur=0.0023771s>).
+
+=====> Testing: ['fo']
+===> Feature subset testing at step: 2/32
+Got accuracy of <acc=72.5000%> with <n_comps=1>.		Took <total_dur=0.0637861s> in total. (<regression_dur=0.0164451s>; <training_dur=0.0448383s>; <prediction_dur=0.0025027s>).
+Got accuracy of <acc=80.0000%> with <n_comps=2>.		Took <total_dur=0.0610822s> in total. (<regression_dur=0.0125727s>; <training_dur=0.0460288s>; <prediction_dur=0.0024808s>).
+Got accuracy of <acc=80.0000%> with <n_comps=3>.		Took <total_dur=0.0612508s> in total. (<regression_dur=0.0125748s>; <training_dur=0.0462543s>; <prediction_dur=0.0024216s>).
+Got accuracy of <acc=80.0000%> with <n_comps=4>.		Took <total_dur=0.0605331s> in total. (<regression_dur=0.0123714s>; <training_dur=0.0456451s>; <prediction_dur=0.0025166s>).
+Got accuracy of <acc=80.0000%> with <n_comps=5>.		Took <total_dur=0.0613067s> in total. (<regression_dur=0.0125927s>; <training_dur=0.0461704s>; <prediction_dur=0.0025436s>).
+Got accuracy of <acc=80.0000%> with <n_comps=6>.		Took <total_dur=0.0609536s> in total. (<regression_dur=0.0130171s>; <training_dur=0.0453765s>; <prediction_dur=0.0025600s>).
+Got accuracy of <acc=80.0000%> with <n_comps=7>.		Took <total_dur=0.0615762s> in total. (<regression_dur=0.0136145s>; <training_dur=0.0454079s>; <prediction_dur=0.0025538s>).
+Got accuracy of <acc=80.0000%> with <n_comps=8>.		Took <total_dur=0.0587730s> in total. (<regression_dur=0.0126438s>; <training_dur=0.0437361s>; <prediction_dur=0.0023932s>).
+Got accuracy of <acc=80.0000%> with <n_comps=9>.		Took <total_dur=0.0604219s> in total. (<regression_dur=0.0123038s>; <training_dur=0.0456050s>; <prediction_dur=0.0025132s>).
+
+=====> Testing: ['glcm', 'fo']
+===> Feature subset testing at step: 3/32
+Got accuracy of <acc=72.5000%> with <n_comps=1>.		Took <total_dur=0.0651510s> in total. (<regression_dur=0.0167923s>; <training_dur=0.0458302s>; <prediction_dur=0.0025285s>).
+Got accuracy of <acc=75.0000%> with <n_comps=2>.		Took <total_dur=0.0746988s> in total. (<regression_dur=0.0167604s>; <training_dur=0.0538686s>; <prediction_dur=0.0040698s>).
+Got accuracy of <acc=80.0000%> with <n_comps=3>.		Took <total_dur=0.0720912s> in total. (<regression_dur=0.0160940s>; <training_dur=0.0533518s>; <prediction_dur=0.0026454s>).
+Got accuracy of <acc=80.0000%> with <n_comps=4>.		Took <total_dur=0.0727632s> in total. (<regression_dur=0.0136657s>; <training_dur=0.0566365s>; <prediction_dur=0.0024611s>).
+Got accuracy of <acc=77.5000%> with <n_comps=5>.		Took <total_dur=0.0954699s> in total. (<regression_dur=0.0140746s>; <training_dur=0.0786795s>; <prediction_dur=0.0027157s>).
+Got accuracy of <acc=77.5000%> with <n_comps=6>.		Took <total_dur=0.0766373s> in total. (<regression_dur=0.0137377s>; <training_dur=0.0604406s>; <prediction_dur=0.0024590s>).
+Got accuracy of <acc=77.5000%> with <n_comps=7>.		Took <total_dur=0.0796112s> in total. (<regression_dur=0.0136323s>; <training_dur=0.0633594s>; <prediction_dur=0.0026195s>).
+Got accuracy of <acc=75.0000%> with <n_comps=8>.		Took <total_dur=0.0785865s> in total. (<regression_dur=0.0132078s>; <training_dur=0.0628570s>; <prediction_dur=0.0025218s>).
+Got accuracy of <acc=77.5000%> with <n_comps=9>.		Took <total_dur=0.0723479s> in total. (<regression_dur=0.0137259s>; <training_dur=0.0561430s>; <prediction_dur=0.0024790s>).
+Got accuracy of <acc=75.0000%> with <n_comps=10>.		Took <total_dur=0.0712173s> in total. (<regression_dur=0.0132514s>; <training_dur=0.0555033s>; <prediction_dur=0.0024626s>).
+Got accuracy of <acc=75.0000%> with <n_comps=11>.		Took <total_dur=0.0711499s> in total. (<regression_dur=0.0133523s>; <training_dur=0.0552715s>; <prediction_dur=0.0025261s>).
+Got accuracy of <acc=75.0000%> with <n_comps=12>.		Took <total_dur=0.0717231s> in total. (<regression_dur=0.0138203s>; <training_dur=0.0552739s>; <prediction_dur=0.0026289s>).
+Got accuracy of <acc=75.0000%> with <n_comps=13>.		Took <total_dur=0.0477141s> in total. (<regression_dur=0.0112179s>; <training_dur=0.0346981s>; <prediction_dur=0.0017981s>).
+Got accuracy of <acc=75.0000%> with <n_comps=14>.		Took <total_dur=0.0444180s> in total. (<regression_dur=0.0090511s>; <training_dur=0.0338449s>; <prediction_dur=0.0015220s>).
+Got accuracy of <acc=75.0000%> with <n_comps=15>.		Took <total_dur=0.0471304s> in total. (<regression_dur=0.0090702s>; <training_dur=0.0364036s>; <prediction_dur=0.0016566s>).
+
+=====> Testing: ['sfta']
+===> Feature subset testing at step: 4/32
+Got accuracy of <acc=45.0000%> with <n_comps=1>.		Took <total_dur=0.0472764s> in total. (<regression_dur=0.0145178s>; <training_dur=0.0308455s>; <prediction_dur=0.0019131s>).
+Got accuracy of <acc=45.0000%> with <n_comps=2>.		Took <total_dur=0.0487316s> in total. (<regression_dur=0.0102853s>; <training_dur=0.0365043s>; <prediction_dur=0.0019420s>).
+Got accuracy of <acc=62.5000%> with <n_comps=3>.		Took <total_dur=0.0959929s> in total. (<regression_dur=0.0128771s>; <training_dur=0.0797324s>; <prediction_dur=0.0033835s>).
+Got accuracy of <acc=57.5000%> with <n_comps=4>.		Took <total_dur=0.1124745s> in total. (<regression_dur=0.0184739s>; <training_dur=0.0907247s>; <prediction_dur=0.0032759s>).
+Got accuracy of <acc=82.5000%> with <n_comps=5>.		Took <total_dur=0.1039760s> in total. (<regression_dur=0.0153370s>; <training_dur=0.0861505s>; <prediction_dur=0.0024885s>).
+Got accuracy of <acc=80.0000%> with <n_comps=6>.		Took <total_dur=0.1302172s> in total. (<regression_dur=0.0159075s>; <training_dur=0.1115073s>; <prediction_dur=0.0028024s>).
+Got accuracy of <acc=82.5000%> with <n_comps=7>.		Took <total_dur=0.1265485s> in total. (<regression_dur=0.0157951s>; <training_dur=0.1080696s>; <prediction_dur=0.0026838s>).
+Got accuracy of <acc=77.5000%> with <n_comps=8>.		Took <total_dur=0.1039706s> in total. (<regression_dur=0.0163917s>; <training_dur=0.0850926s>; <prediction_dur=0.0024862s>).
+Got accuracy of <acc=75.0000%> with <n_comps=9>.		Took <total_dur=0.1281357s> in total. (<regression_dur=0.0155034s>; <training_dur=0.1103032s>; <prediction_dur=0.0023291s>).
+Got accuracy of <acc=75.0000%> with <n_comps=10>.		Took <total_dur=0.1081681s> in total. (<regression_dur=0.0150738s>; <training_dur=0.0904855s>; <prediction_dur=0.0026087s>).
+Got accuracy of <acc=77.5000%> with <n_comps=11>.		Took <total_dur=0.1478369s> in total. (<regression_dur=0.0155985s>; <training_dur=0.1298250s>; <prediction_dur=0.0024135s>).
+Got accuracy of <acc=80.0000%> with <n_comps=12>.		Took <total_dur=0.1265894s> in total. (<regression_dur=0.0151184s>; <training_dur=0.1088418s>; <prediction_dur=0.0026292s>).
+Got accuracy of <acc=72.5000%> with <n_comps=13>.		Took <total_dur=0.1498336s> in total. (<regression_dur=0.0158284s>; <training_dur=0.1306213s>; <prediction_dur=0.0033838s>).
+Got accuracy of <acc=77.5000%> with <n_comps=14>.		Took <total_dur=0.1185046s> in total. (<regression_dur=0.0151377s>; <training_dur=0.1006439s>; <prediction_dur=0.0027231s>).
+Got accuracy of <acc=77.5000%> with <n_comps=15>.		Took <total_dur=0.0973795s> in total. (<regression_dur=0.0163470s>; <training_dur=0.0786804s>; <prediction_dur=0.0023520s>).
+Got accuracy of <acc=72.5000%> with <n_comps=16>.		Took <total_dur=0.0804896s> in total. (<regression_dur=0.0114808s>; <training_dur=0.0671780s>; <prediction_dur=0.0018307s>).
+Got accuracy of <acc=75.0000%> with <n_comps=17>.		Took <total_dur=0.0831537s> in total. (<regression_dur=0.0103909s>; <training_dur=0.0707787s>; <prediction_dur=0.0019841s>).
+Got accuracy of <acc=72.5000%> with <n_comps=18>.		Took <total_dur=0.0765721s> in total. (<regression_dur=0.0112102s>; <training_dur=0.0630619s>; <prediction_dur=0.0023001s>).
+Got accuracy of <acc=70.0000%> with <n_comps=19>.		Took <total_dur=0.1026287s> in total. (<regression_dur=0.0117080s>; <training_dur=0.0887525s>; <prediction_dur=0.0021682s>).
+Got accuracy of <acc=70.0000%> with <n_comps=20>.		Took <total_dur=0.0731034s> in total. (<regression_dur=0.0112261s>; <training_dur=0.0599902s>; <prediction_dur=0.0018870s>).
+Got accuracy of <acc=70.0000%> with <n_comps=21>.		Took <total_dur=0.1069739s> in total. (<regression_dur=0.0100730s>; <training_dur=0.0934820s>; <prediction_dur=0.0034188s>).
+Got accuracy of <acc=67.5000%> with <n_comps=22>.		Took <total_dur=0.1283990s> in total. (<regression_dur=0.0156541s>; <training_dur=0.1100553s>; <prediction_dur=0.0026897s>).
+Got accuracy of <acc=67.5000%> with <n_comps=23>.		Took <total_dur=0.1375552s> in total. (<regression_dur=0.0159157s>; <training_dur=0.1177042s>; <prediction_dur=0.0039353s>).
+Got accuracy of <acc=67.5000%> with <n_comps=24>.		Took <total_dur=0.1299693s> in total. (<regression_dur=0.0119265s>; <training_dur=0.1143875s>; <prediction_dur=0.0036553s>).
+Got accuracy of <acc=67.5000%> with <n_comps=25>.		Took <total_dur=0.1263511s> in total. (<regression_dur=0.0159269s>; <training_dur=0.1064303s>; <prediction_dur=0.0039939s>).
+Got accuracy of <acc=67.5000%> with <n_comps=26>.		Took <total_dur=0.1270347s> in total. (<regression_dur=0.0160784s>; <training_dur=0.1065342s>; <prediction_dur=0.0044221s>).
+Got accuracy of <acc=67.5000%> with <n_comps=27>.		Took <total_dur=0.1264337s> in total. (<regression_dur=0.0164153s>; <training_dur=0.1060367s>; <prediction_dur=0.0039817s>).
+Got accuracy of <acc=67.5000%> with <n_comps=28>.		Took <total_dur=0.0875877s> in total. (<regression_dur=0.0161684s>; <training_dur=0.0693590s>; <prediction_dur=0.0020603s>).
+Got accuracy of <acc=67.5000%> with <n_comps=29>.		Took <total_dur=0.0855069s> in total. (<regression_dur=0.0130257s>; <training_dur=0.0699368s>; <prediction_dur=0.0025443s>).
+Got accuracy of <acc=67.5000%> with <n_comps=30>.		Took <total_dur=0.1210386s> in total. (<regression_dur=0.0115115s>; <training_dur=0.1057936s>; <prediction_dur=0.0037336s>).
+Got accuracy of <acc=67.5000%> with <n_comps=31>.		Took <total_dur=0.1266696s> in total. (<regression_dur=0.0158901s>; <training_dur=0.1066813s>; <prediction_dur=0.0040982s>).
+
+=====> Testing: ['glcm', 'sfta']
+===> Feature subset testing at step: 5/32
+Got accuracy of <acc=45.0000%> with <n_comps=1>.		Took <total_dur=0.0821380s> in total. (<regression_dur=0.0219662s>; <training_dur=0.0565329s>; <prediction_dur=0.0036389s>).
+Got accuracy of <acc=45.0000%> with <n_comps=2>.		Took <total_dur=0.0953748s> in total. (<regression_dur=0.0168083s>; <training_dur=0.0747030s>; <prediction_dur=0.0038635s>).
+Got accuracy of <acc=57.5000%> with <n_comps=3>.		Took <total_dur=0.1020163s> in total. (<regression_dur=0.0175858s>; <training_dur=0.0807283s>; <prediction_dur=0.0037022s>).
+Got accuracy of <acc=87.5000%> with <n_comps=4>.		Took <total_dur=0.1062987s> in total. (<regression_dur=0.0172411s>; <training_dur=0.0860793s>; <prediction_dur=0.0029783s>).
+Got accuracy of <acc=90.0000%> with <n_comps=5>.		Took <total_dur=0.1243814s> in total. (<regression_dur=0.0174330s>; <training_dur=0.1038645s>; <prediction_dur=0.0030838s>).
+Got accuracy of <acc=82.5000%> with <n_comps=6>.		Took <total_dur=0.1299813s> in total. (<regression_dur=0.0173264s>; <training_dur=0.1093493s>; <prediction_dur=0.0033055s>).
+Got accuracy of <acc=77.5000%> with <n_comps=7>.		Took <total_dur=0.1476228s> in total. (<regression_dur=0.0175319s>; <training_dur=0.1271074s>; <prediction_dur=0.0029834s>).
+Got accuracy of <acc=67.5000%> with <n_comps=8>.		Took <total_dur=0.1481429s> in total. (<regression_dur=0.0175870s>; <training_dur=0.1278543s>; <prediction_dur=0.0027016s>).
+Got accuracy of <acc=70.0000%> with <n_comps=9>.		Took <total_dur=0.1449879s> in total. (<regression_dur=0.0171284s>; <training_dur=0.1246569s>; <prediction_dur=0.0032026s>).
+Got accuracy of <acc=70.0000%> with <n_comps=10>.		Took <total_dur=0.1256442s> in total. (<regression_dur=0.0182317s>; <training_dur=0.1047585s>; <prediction_dur=0.0026540s>).
+Got accuracy of <acc=70.0000%> with <n_comps=11>.		Took <total_dur=0.1144007s> in total. (<regression_dur=0.0171803s>; <training_dur=0.0946129s>; <prediction_dur=0.0026075s>).
+Got accuracy of <acc=70.0000%> with <n_comps=12>.		Took <total_dur=0.1316293s> in total. (<regression_dur=0.0169940s>; <training_dur=0.1120820s>; <prediction_dur=0.0025533s>).
+Got accuracy of <acc=72.5000%> with <n_comps=13>.		Took <total_dur=0.1123186s> in total. (<regression_dur=0.0160445s>; <training_dur=0.0921309s>; <prediction_dur=0.0041432s>).
+Got accuracy of <acc=72.5000%> with <n_comps=14>.		Took <total_dur=0.0797347s> in total. (<regression_dur=0.0179306s>; <training_dur=0.0599292s>; <prediction_dur=0.0018749s>).
+Got accuracy of <acc=70.0000%> with <n_comps=15>.		Took <total_dur=0.0717798s> in total. (<regression_dur=0.0115318s>; <training_dur=0.0582672s>; <prediction_dur=0.0019809s>).
+Got accuracy of <acc=70.0000%> with <n_comps=16>.		Took <total_dur=0.0616462s> in total. (<regression_dur=0.0125383s>; <training_dur=0.0471705s>; <prediction_dur=0.0019375s>).
+Got accuracy of <acc=70.0000%> with <n_comps=17>.		Took <total_dur=0.0709856s> in total. (<regression_dur=0.0128190s>; <training_dur=0.0558601s>; <prediction_dur=0.0023065s>).
+Got accuracy of <acc=75.0000%> with <n_comps=18>.		Took <total_dur=0.0685762s> in total. (<regression_dur=0.0119504s>; <training_dur=0.0546400s>; <prediction_dur=0.0019857s>).
+Got accuracy of <acc=72.5000%> with <n_comps=19>.		Took <total_dur=0.0739914s> in total. (<regression_dur=0.0118852s>; <training_dur=0.0599708s>; <prediction_dur=0.0021353s>).
+Got accuracy of <acc=72.5000%> with <n_comps=20>.		Took <total_dur=0.0662133s> in total. (<regression_dur=0.0127734s>; <training_dur=0.0516249s>; <prediction_dur=0.0018151s>).
+Got accuracy of <acc=80.0000%> with <n_comps=21>.		Took <total_dur=0.0762367s> in total. (<regression_dur=0.0139818s>; <training_dur=0.0602651s>; <prediction_dur=0.0019898s>).
+Got accuracy of <acc=80.0000%> with <n_comps=22>.		Took <total_dur=0.0916094s> in total. (<regression_dur=0.0119593s>; <training_dur=0.0774077s>; <prediction_dur=0.0022424s>).
+Got accuracy of <acc=80.0000%> with <n_comps=23>.		Took <total_dur=0.1217006s> in total. (<regression_dur=0.0180371s>; <training_dur=0.0996614s>; <prediction_dur=0.0040022s>).
+Got accuracy of <acc=77.5000%> with <n_comps=24>.		Took <total_dur=0.1298135s> in total. (<regression_dur=0.0178617s>; <training_dur=0.1083587s>; <prediction_dur=0.0035930s>).
+Got accuracy of <acc=77.5000%> with <n_comps=25>.		Took <total_dur=0.1382942s> in total. (<regression_dur=0.0183157s>; <training_dur=0.1166043s>; <prediction_dur=0.0033741s>).
+Got accuracy of <acc=80.0000%> with <n_comps=26>.		Took <total_dur=0.1168734s> in total. (<regression_dur=0.0161115s>; <training_dur=0.0962710s>; <prediction_dur=0.0044909s>).
+Got accuracy of <acc=80.0000%> with <n_comps=27>.		Took <total_dur=0.0727025s> in total. (<regression_dur=0.0162683s>; <training_dur=0.0546048s>; <prediction_dur=0.0018295s>).
+Got accuracy of <acc=77.5000%> with <n_comps=28>.		Took <total_dur=0.0705887s> in total. (<regression_dur=0.0115857s>; <training_dur=0.0569900s>; <prediction_dur=0.0020130s>).
+Got accuracy of <acc=77.5000%> with <n_comps=29>.		Took <total_dur=0.0818137s> in total. (<regression_dur=0.0145510s>; <training_dur=0.0653041s>; <prediction_dur=0.0019587s>).
+Got accuracy of <acc=77.5000%> with <n_comps=30>.		Took <total_dur=0.1113758s> in total. (<regression_dur=0.0174404s>; <training_dur=0.0900460s>; <prediction_dur=0.0038894s>).
+Got accuracy of <acc=77.5000%> with <n_comps=31>.		Took <total_dur=0.1076881s> in total. (<regression_dur=0.0172492s>; <training_dur=0.0879082s>; <prediction_dur=0.0025307s>).
+Got accuracy of <acc=77.5000%> with <n_comps=32>.		Took <total_dur=0.1077679s> in total. (<regression_dur=0.0169440s>; <training_dur=0.0875729s>; <prediction_dur=0.0032510s>).
+Got accuracy of <acc=77.5000%> with <n_comps=33>.		Took <total_dur=0.1089101s> in total. (<regression_dur=0.0169067s>; <training_dur=0.0884215s>; <prediction_dur=0.0035818s>).
+Got accuracy of <acc=77.5000%> with <n_comps=34>.		Took <total_dur=0.1077800s> in total. (<regression_dur=0.0173105s>; <training_dur=0.0880961s>; <prediction_dur=0.0023734s>).
+Got accuracy of <acc=77.5000%> with <n_comps=35>.		Took <total_dur=0.1075721s> in total. (<regression_dur=0.0168124s>; <training_dur=0.0881784s>; <prediction_dur=0.0025812s>).
+Got accuracy of <acc=77.5000%> with <n_comps=36>.		Took <total_dur=0.1095256s> in total. (<regression_dur=0.0175404s>; <training_dur=0.0884111s>; <prediction_dur=0.0035741s>).
+Got accuracy of <acc=77.5000%> with <n_comps=37>.		Took <total_dur=0.1092158s> in total. (<regression_dur=0.0179700s>; <training_dur=0.0889067s>; <prediction_dur=0.0023391s>).
+
+=====> Testing: ['fo', 'sfta']
+===> Feature subset testing at step: 6/32
+Got accuracy of <acc=62.5000%> with <n_comps=1>.		Took <total_dur=0.0865572s> in total. (<regression_dur=0.0206599s>; <training_dur=0.0625983s>; <prediction_dur=0.0032990s>).
+Got accuracy of <acc=62.5000%> with <n_comps=2>.		Took <total_dur=0.1008978s> in total. (<regression_dur=0.0167874s>; <training_dur=0.0809372s>; <prediction_dur=0.0031731s>).
+Got accuracy of <acc=70.0000%> with <n_comps=3>.		Took <total_dur=0.0763511s> in total. (<regression_dur=0.0169020s>; <training_dur=0.0570815s>; <prediction_dur=0.0023676s>).
+Got accuracy of <acc=75.0000%> with <n_comps=4>.		Took <total_dur=0.0633052s> in total. (<regression_dur=0.0125831s>; <training_dur=0.0489586s>; <prediction_dur=0.0017635s>).
+Got accuracy of <acc=85.0000%> with <n_comps=5>.		Took <total_dur=0.0834572s> in total. (<regression_dur=0.0124964s>; <training_dur=0.0687016s>; <prediction_dur=0.0022591s>).
+Got accuracy of <acc=85.0000%> with <n_comps=6>.		Took <total_dur=0.0951477s> in total. (<regression_dur=0.0118455s>; <training_dur=0.0808694s>; <prediction_dur=0.0024328s>).
+Got accuracy of <acc=85.0000%> with <n_comps=7>.		Took <total_dur=0.0800363s> in total. (<regression_dur=0.0134488s>; <training_dur=0.0644339s>; <prediction_dur=0.0021536s>).
+Got accuracy of <acc=80.0000%> with <n_comps=8>.		Took <total_dur=0.0718005s> in total. (<regression_dur=0.0119720s>; <training_dur=0.0579320s>; <prediction_dur=0.0018965s>).
+Got accuracy of <acc=75.0000%> with <n_comps=9>.		Took <total_dur=0.0659091s> in total. (<regression_dur=0.0135526s>; <training_dur=0.0507362s>; <prediction_dur=0.0016204s>).
+Got accuracy of <acc=70.0000%> with <n_comps=10>.		Took <total_dur=0.0730940s> in total. (<regression_dur=0.0128894s>; <training_dur=0.0582603s>; <prediction_dur=0.0019443s>).
+Got accuracy of <acc=77.5000%> with <n_comps=11>.		Took <total_dur=0.0625430s> in total. (<regression_dur=0.0116609s>; <training_dur=0.0488621s>; <prediction_dur=0.0020200s>).
+Got accuracy of <acc=77.5000%> with <n_comps=12>.		Took <total_dur=0.0852063s> in total. (<regression_dur=0.0128370s>; <training_dur=0.0703594s>; <prediction_dur=0.0020099s>).
+Got accuracy of <acc=80.0000%> with <n_comps=13>.		Took <total_dur=0.1010263s> in total. (<regression_dur=0.0124471s>; <training_dur=0.0864884s>; <prediction_dur=0.0020908s>).
+Got accuracy of <acc=85.0000%> with <n_comps=14>.		Took <total_dur=0.0728948s> in total. (<regression_dur=0.0134456s>; <training_dur=0.0577081s>; <prediction_dur=0.0017411s>).
+Got accuracy of <acc=82.5000%> with <n_comps=15>.		Took <total_dur=0.1107604s> in total. (<regression_dur=0.0171835s>; <training_dur=0.0902916s>; <prediction_dur=0.0032853s>).
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                Got accuracy of <acc=82.5000%> with <n_comps=38>.		Took <total_dur=0.0907725s> in total. (<regression_dur=0.0127679s>; <training_dur=0.0757035s>; <prediction_dur=0.0023011s>).
+Got accuracy of <acc=82.5000%> with <n_comps=39>.		Took <total_dur=0.1083587s> in total. (<regression_dur=0.0141889s>; <training_dur=0.0915614s>; <prediction_dur=0.0026084s>).
+
+=====> Testing: ['glcm', 'fo', 'sfta']
+===> Feature subset testing at step: 7/32
+Got accuracy of <acc=62.5000%> with <n_comps=1>.		Took <total_dur=0.0576543s> in total. (<regression_dur=0.0197105s>; <training_dur=0.0361082s>; <prediction_dur=0.0018356s>).
+Got accuracy of <acc=70.0000%> with <n_comps=2>.		Took <total_dur=0.0612522s> in total. (<regression_dur=0.0119050s>; <training_dur=0.0468819s>; <prediction_dur=0.0024653s>).
+Got accuracy of <acc=65.0000%> with <n_comps=3>.		Took <total_dur=0.1126849s> in total. (<regression_dur=0.0185556s>; <training_dur=0.0908108s>; <prediction_dur=0.0033185s>).
+Got accuracy of <acc=82.5000%> with <n_comps=4>.		Took <total_dur=0.1278012s> in total. (<regression_dur=0.0185598s>; <training_dur=0.1062072s>; <prediction_dur=0.0030341s>).
+Got accuracy of <acc=85.0000%> with <n_comps=5>.		Took <total_dur=0.1486507s> in total. (<regression_dur=0.0185296s>; <training_dur=0.1258042s>; <prediction_dur=0.0043170s>).
+Got accuracy of <acc=77.5000%> with <n_comps=6>.		Took <total_dur=0.1617909s> in total. (<regression_dur=0.0186017s>; <training_dur=0.1402339s>; <prediction_dur=0.0029552s>).
+Got accuracy of <acc=80.0000%> with <n_comps=7>.		Took <total_dur=0.1747977s> in total. (<regression_dur=0.0192346s>; <training_dur=0.1525714s>; <prediction_dur=0.0029917s>).
+Got accuracy of <acc=70.0000%> with <n_comps=8>.		Took <total_dur=0.1668160s> in total. (<regression_dur=0.0185283s>; <training_dur=0.1452458s>; <prediction_dur=0.0030420s>).
+Got accuracy of <acc=72.5000%> with <n_comps=9>.		Took <total_dur=0.1030229s> in total. (<regression_dur=0.0183441s>; <training_dur=0.0820326s>; <prediction_dur=0.0026462s>).
+Got accuracy of <acc=72.5000%> with <n_comps=10>.		Took <total_dur=0.1152282s> in total. (<regression_dur=0.0188021s>; <training_dur=0.0937665s>; <prediction_dur=0.0026596s>).
+Got accuracy of <acc=72.5000%> with <n_comps=11>.		Took <total_dur=0.1135265s> in total. (<regression_dur=0.0181181s>; <training_dur=0.0933074s>; <prediction_dur=0.0021010s>).
+Got accuracy of <acc=67.5000%> with <n_comps=12>.		Took <total_dur=0.1207493s> in total. (<regression_dur=0.0173596s>; <training_dur=0.1009637s>; <prediction_dur=0.0024260s>).
+Got accuracy of <acc=72.5000%> with <n_comps=13>.		Took <total_dur=0.1073235s> in total. (<regression_dur=0.0188151s>; <training_dur=0.0863638s>; <prediction_dur=0.0021446s>).
+Got accuracy of <acc=72.5000%> with <n_comps=14>.		Took <total_dur=0.1140920s> in total. (<regression_dur=0.0177221s>; <training_dur=0.0931384s>; <prediction_dur=0.0032315s>).
+Got accuracy of <acc=72.5000%> with <n_comps=15>.		Took <total_dur=0.1528634s> in total. (<regression_dur=0.0183151s>; <training_dur=0.1312107s>; <prediction_dur=0.0033377s>).
+Got accuracy of <acc=72.5000%> with <n_comps=16>.		Took <total_dur=0.1579394s> in total. (<regression_dur=0.0188801s>; <training_dur=0.1357809s>; <prediction_dur=0.0032785s>).
+Got accuracy of <acc=75.0000%> with <n_comps=17>.		Took <total_dur=0.1227467s> in total. (<regression_dur=0.0172356s>; <training_dur=0.1034678s>; <prediction_dur=0.0020434s>).
+Got accuracy of <acc=75.0000%> with <n_comps=18>.		Took <total_dur=0.1412729s> in total. (<regression_dur=0.0171651s>; <training_dur=0.1213363s>; <prediction_dur=0.0027714s>).
+Got accuracy of <acc=72.5000%> with <n_comps=19>.		Took <total_dur=0.1372379s> in total. (<regression_dur=0.0184853s>; <training_dur=0.1153353s>; <prediction_dur=0.0034173s>).
+Got accuracy of <acc=72.5000%> with <n_comps=20>.		Took <total_dur=0.1363320s> in total. (<regression_dur=0.0177254s>; <training_dur=0.1165167s>; <prediction_dur=0.0020898s>).
+Got accuracy of <acc=72.5000%> with <n_comps=21>.		Took <total_dur=0.1473360s> in total. (<regression_dur=0.0177940s>; <training_dur=0.1259465s>; <prediction_dur=0.0035954s>).
+Got accuracy of <acc=72.5000%> with <n_comps=22>.		Took <total_dur=0.1091097s> in total. (<regression_dur=0.0181588s>; <training_dur=0.0882255s>; <prediction_dur=0.0027254s>).
+Got accuracy of <acc=75.0000%> with <n_comps=23>.		Took <total_dur=0.1224984s> in total. (<regression_dur=0.0183468s>; <training_dur=0.1006847s>; <prediction_dur=0.0034669s>).
+Got accuracy of <acc=80.0000%> with <n_comps=24>.		Took <total_dur=0.1216568s> in total. (<regression_dur=0.0188743s>; <training_dur=0.1002673s>; <prediction_dur=0.0025151s>).
+Got accuracy of <acc=80.0000%> with <n_comps=25>.		Took <total_dur=0.1290845s> in total. (<regression_dur=0.0182902s>; <training_dur=0.1073066s>; <prediction_dur=0.0034877s>).

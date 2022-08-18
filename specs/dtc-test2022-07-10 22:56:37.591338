@@ -1,0 +1,448 @@
+len(mean)=1000
+len(std)=1000
+len(var)=1000
+patches.shape=(1000, 3, 3)
+patch_size=(x, 3)
+Feature template={feature_template}
+
+=====> Testing: ['patches_mean']
+===> Feature subset testing at step: 1/64
+Testing model.
+================= About to train.
+================= About to predict.
+Got accuracy of <acc=62.5000%> with <n_comps=-1>.		Took <total_dur=0.1912911s> in total.<training_dur=0.1806332s>; <prediction_dur=0.0106580s>).
+
+=====> Testing: ['patches_std']
+===> Feature subset testing at step: 2/64
+Testing model.
+================= About to train.
+================= About to predict.
+Got accuracy of <acc=50.0000%> with <n_comps=-1>.		Took <total_dur=0.1940761s> in total.<training_dur=0.1824853s>; <prediction_dur=0.0115907s>).
+
+=====> Testing: ['patches_mean', 'patches_std']
+===> Feature subset testing at step: 3/64
+Testing model.
+================= About to train.
+================= About to predict.
+Got accuracy of <acc=67.5000%> with <n_comps=-1>.		Took <total_dur=0.2254966s> in total.<training_dur=0.2147277s>; <prediction_dur=0.0107689s>).
+
+=====> Testing: ['patches_var']
+===> Feature subset testing at step: 4/64
+Testing model.
+================= About to train.
+================= About to predict.
+Got accuracy of <acc=50.0000%> with <n_comps=-1>.		Took <total_dur=0.1991773s> in total.<training_dur=0.1887987s>; <prediction_dur=0.0103787s>).
+
+=====> Testing: ['patches_mean', 'patches_var']
+===> Feature subset testing at step: 5/64
+Testing model.
+================= About to train.
+================= About to predict.
+Got accuracy of <acc=70.0000%> with <n_comps=-1>.		Took <total_dur=0.2242995s> in total.<training_dur=0.2138499s>; <prediction_dur=0.0104496s>).
+
+=====> Testing: ['patches_std', 'patches_var']
+===> Feature subset testing at step: 6/64
+Testing model.
+================= About to train.
+================= About to predict.
+Got accuracy of <acc=47.5000%> with <n_comps=-1>.		Took <total_dur=0.2230546s> in total.<training_dur=0.2126279s>; <prediction_dur=0.0104268s>).
+
+=====> Testing: ['patches_mean', 'patches_std', 'patches_var']
+===> Feature subset testing at step: 7/64
+Testing model.
+================= About to train.
+================= About to predict.
+Got accuracy of <acc=70.0000%> with <n_comps=-1>.		Took <total_dur=0.2506407s> in total.<training_dur=0.2398950s>; <prediction_dur=0.0107458s>).
+
+=====> Testing: ['corner_kitchen_rosenfeld']
+===> Feature subset testing at step: 8/64
+Testing model.
+================= About to train.
+================= About to predict.
+Got accuracy of <acc=65.0000%> with <n_comps=-1>.		Took <total_dur=0.4424214s> in total.<training_dur=0.4291796s>; <prediction_dur=0.0132418s>).
+
+=====> Testing: ['patches_mean', 'corner_kitchen_rosenfeld']
+===> Feature subset testing at step: 9/64
+Testing model.
+================= About to train.
+================= About to predict.
+Got accuracy of <acc=62.5000%> with <n_comps=-1>.		Took <total_dur=0.4354793s> in total.<training_dur=0.4239114s>; <prediction_dur=0.0115679s>).
+
+=====> Testing: ['patches_std', 'corner_kitchen_rosenfeld']
+===> Feature subset testing at step: 10/64
+Testing model.
+================= About to train.
+================= About to predict.
+Got accuracy of <acc=50.0000%> with <n_comps=-1>.		Took <total_dur=0.4391723s> in total.<training_dur=0.4275221s>; <prediction_dur=0.0116502s>).
+
+=====> Testing: ['patches_mean', 'patches_std', 'corner_kitchen_rosenfeld']
+===> Feature subset testing at step: 11/64
+Testing model.
+================= About to train.
+================= About to predict.
+Got accuracy of <acc=57.5000%> with <n_comps=-1>.		Took <total_dur=0.4446147s> in total.<training_dur=0.4330961s>; <prediction_dur=0.0115186s>).
+
+=====> Testing: ['patches_var', 'corner_kitchen_rosenfeld']
+===> Feature subset testing at step: 12/64
+Testing model.
+================= About to train.
+================= About to predict.
+Got accuracy of <acc=52.5000%> with <n_comps=-1>.		Took <total_dur=0.4382245s> in total.<training_dur=0.4264485s>; <prediction_dur=0.0117760s>).
+
+=====> Testing: ['patches_mean', 'patches_var', 'corner_kitchen_rosenfeld']
+===> Feature subset testing at step: 13/64
+Testing model.
+================= About to train.
+================= About to predict.
+Got accuracy of <acc=57.5000%> with <n_comps=-1>.		Took <total_dur=0.4458803s> in total.<training_dur=0.4342035s>; <prediction_dur=0.0116767s>).
+
+=====> Testing: ['patches_std', 'patches_var', 'corner_kitchen_rosenfeld']
+===> Feature subset testing at step: 14/64
+Testing model.
+================= About to train.
+================= About to predict.
+Got accuracy of <acc=45.0000%> with <n_comps=-1>.		Took <total_dur=0.4445403s> in total.<training_dur=0.4328762s>; <prediction_dur=0.0116641s>).
+
+=====> Testing: ['patches_mean', 'patches_std', 'patches_var', 'corner_kitchen_rosenfeld']
+===> Feature subset testing at step: 15/64
+Testing model.
+================= About to train.
+================= About to predict.
+Got accuracy of <acc=52.5000%> with <n_comps=-1>.		Took <total_dur=0.4662017s> in total.<training_dur=0.4541386s>; <prediction_dur=0.0120631s>).
+
+=====> Testing: ['daisy']
+===> Feature subset testing at step: 16/64
+Testing model.
+================= About to train.
+================= About to predict.
+Got accuracy of <acc=72.5000%> with <n_comps=-1>.		Took <total_dur=1.3358755s> in total.<training_dur=1.3151278s>; <prediction_dur=0.0207477s>).
+
+=====> Testing: ['patches_mean', 'daisy']
+===> Feature subset testing at step: 17/64
+Testing model.
+================= About to train.
+================= About to predict.
+Got accuracy of <acc=72.5000%> with <n_comps=-1>.		Took <total_dur=1.3898866s> in total.<training_dur=1.3705933s>; <prediction_dur=0.0192933s>).
+
+=====> Testing: ['patches_std', 'daisy']
+===> Feature subset testing at step: 18/64
+Testing model.
+================= About to train.
+================= About to predict.
+Got accuracy of <acc=67.5000%> with <n_comps=-1>.		Took <total_dur=1.3736240s> in total.<training_dur=1.3524928s>; <prediction_dur=0.0211312s>).
+
+=====> Testing: ['patches_mean', 'patches_std', 'daisy']
+===> Feature subset testing at step: 19/64
+Testing model.
+================= About to train.
+================= About to predict.
+Got accuracy of <acc=75.0000%> with <n_comps=-1>.		Took <total_dur=1.4724554s> in total.<training_dur=1.4515272s>; <prediction_dur=0.0209282s>).
+
+=====> Testing: ['patches_var', 'daisy']
+===> Feature subset testing at step: 20/64
+Testing model.
+================= About to train.
+================= About to predict.
+Got accuracy of <acc=67.5000%> with <n_comps=-1>.		Took <total_dur=1.4231436s> in total.<training_dur=1.4039616s>; <prediction_dur=0.0191820s>).
+
+=====> Testing: ['patches_mean', 'patches_var', 'daisy']
+===> Feature subset testing at step: 21/64
+Testing model.
+================= About to train.
+================= About to predict.
+Got accuracy of <acc=75.0000%> with <n_comps=-1>.		Took <total_dur=1.4549518s> in total.<training_dur=1.4348218s>; <prediction_dur=0.0201300s>).
+
+=====> Testing: ['patches_std', 'patches_var', 'daisy']
+===> Feature subset testing at step: 22/64
+Testing model.
+================= About to train.
+================= About to predict.
+Got accuracy of <acc=72.5000%> with <n_comps=-1>.		Took <total_dur=1.3915443s> in total.<training_dur=1.3710869s>; <prediction_dur=0.0204574s>).
+
+=====> Testing: ['patches_mean', 'patches_std', 'patches_var', 'daisy']
+===> Feature subset testing at step: 23/64
+Testing model.
+================= About to train.
+================= About to predict.
+Got accuracy of <acc=77.5000%> with <n_comps=-1>.		Took <total_dur=1.3867168s> in total.<training_dur=1.3677977s>; <prediction_dur=0.0189192s>).
+
+=====> Testing: ['corner_kitchen_rosenfeld', 'daisy']
+===> Feature subset testing at step: 24/64
+Testing model.
+================= About to train.
+================= About to predict.
+Got accuracy of <acc=80.0000%> with <n_comps=-1>.		Took <total_dur=1.4211113s> in total.<training_dur=1.4014350s>; <prediction_dur=0.0196763s>).
+
+=====> Testing: ['patches_mean', 'corner_kitchen_rosenfeld', 'daisy']
+===> Feature subset testing at step: 25/64
+Testing model.
+================= About to train.
+================= About to predict.
+Got accuracy of <acc=72.5000%> with <n_comps=-1>.		Took <total_dur=1.5240182s> in total.<training_dur=1.5037047s>; <prediction_dur=0.0203134s>).
+
+=====> Testing: ['patches_std', 'corner_kitchen_rosenfeld', 'daisy']
+===> Feature subset testing at step: 26/64
+Testing model.
+================= About to train.
+================= About to predict.
+Got accuracy of <acc=72.5000%> with <n_comps=-1>.		Took <total_dur=1.3953924s> in total.<training_dur=1.3755660s>; <prediction_dur=0.0198263s>).
+
+=====> Testing: ['patches_mean', 'patches_std', 'corner_kitchen_rosenfeld', 'daisy']
+===> Feature subset testing at step: 27/64
+Testing model.
+================= About to train.
+================= About to predict.
+Got accuracy of <acc=75.0000%> with <n_comps=-1>.		Took <total_dur=1.4277591s> in total.<training_dur=1.4076483s>; <prediction_dur=0.0201108s>).
+
+=====> Testing: ['patches_var', 'corner_kitchen_rosenfeld', 'daisy']
+===> Feature subset testing at step: 28/64
+Testing model.
+================= About to train.
+================= About to predict.
+Got accuracy of <acc=72.5000%> with <n_comps=-1>.		Took <total_dur=1.4085514s> in total.<training_dur=1.3883537s>; <prediction_dur=0.0201977s>).
+
+=====> Testing: ['patches_mean', 'patches_var', 'corner_kitchen_rosenfeld', 'daisy']
+===> Feature subset testing at step: 29/64
+Testing model.
+================= About to train.
+================= About to predict.
+Got accuracy of <acc=75.0000%> with <n_comps=-1>.		Took <total_dur=1.4199720s> in total.<training_dur=1.3992065s>; <prediction_dur=0.0207655s>).
+
+=====> Testing: ['patches_std', 'patches_var', 'corner_kitchen_rosenfeld', 'daisy']
+===> Feature subset testing at step: 30/64
+Testing model.
+================= About to train.
+================= About to predict.
+Got accuracy of <acc=75.0000%> with <n_comps=-1>.		Took <total_dur=1.3992195s> in total.<training_dur=1.3786976s>; <prediction_dur=0.0205218s>).
+
+=====> Testing: ['patches_mean', 'patches_std', 'patches_var', 'corner_kitchen_rosenfeld', 'daisy']
+===> Feature subset testing at step: 31/64
+Testing model.
+================= About to train.
+================= About to predict.
+Got accuracy of <acc=75.0000%> with <n_comps=-1>.		Took <total_dur=1.4385869s> in total.<training_dur=1.4179894s>; <prediction_dur=0.0205975s>).
+
+=====> Testing: ['draw_multiblock_lbp']
+===> Feature subset testing at step: 32/64
+Testing model.
+================= About to train.
+================= About to predict.
+Got accuracy of <acc=75.0000%> with <n_comps=-1>.		Took <total_dur=0.6508510s> in total.<training_dur=0.6368546s>; <prediction_dur=0.0139965s>).
+
+=====> Testing: ['patches_mean', 'draw_multiblock_lbp']
+===> Feature subset testing at step: 33/64
+Testing model.
+================= About to train.
+================= About to predict.
+Got accuracy of <acc=75.0000%> with <n_comps=-1>.		Took <total_dur=0.6585691s> in total.<training_dur=0.6447679s>; <prediction_dur=0.0138012s>).
+
+=====> Testing: ['patches_std', 'draw_multiblock_lbp']
+===> Feature subset testing at step: 34/64
+Testing model.
+================= About to train.
+================= About to predict.
+Got accuracy of <acc=80.0000%> with <n_comps=-1>.		Took <total_dur=0.6631593s> in total.<training_dur=0.6492492s>; <prediction_dur=0.0139101s>).
+
+=====> Testing: ['patches_mean', 'patches_std', 'draw_multiblock_lbp']
+===> Feature subset testing at step: 35/64
+Testing model.
+================= About to train.
+================= About to predict.
+Got accuracy of <acc=77.5000%> with <n_comps=-1>.		Took <total_dur=0.6453976s> in total.<training_dur=0.6316505s>; <prediction_dur=0.0137470s>).
+
+=====> Testing: ['patches_var', 'draw_multiblock_lbp']
+===> Feature subset testing at step: 36/64
+Testing model.
+================= About to train.
+================= About to predict.
+Got accuracy of <acc=80.0000%> with <n_comps=-1>.		Took <total_dur=0.6646700s> in total.<training_dur=0.6509316s>; <prediction_dur=0.0137385s>).
+
+=====> Testing: ['patches_mean', 'patches_var', 'draw_multiblock_lbp']
+===> Feature subset testing at step: 37/64
+Testing model.
+================= About to train.
+================= About to predict.
+Got accuracy of <acc=77.5000%> with <n_comps=-1>.		Took <total_dur=0.6300554s> in total.<training_dur=0.6155564s>; <prediction_dur=0.0144990s>).
+
+=====> Testing: ['patches_std', 'patches_var', 'draw_multiblock_lbp']
+===> Feature subset testing at step: 38/64
+Testing model.
+================= About to train.
+================= About to predict.
+Got accuracy of <acc=77.5000%> with <n_comps=-1>.		Took <total_dur=0.6571752s> in total.<training_dur=0.6432772s>; <prediction_dur=0.0138980s>).
+
+=====> Testing: ['patches_mean', 'patches_std', 'patches_var', 'draw_multiblock_lbp']
+===> Feature subset testing at step: 39/64
+Testing model.
+================= About to train.
+================= About to predict.
+Got accuracy of <acc=77.5000%> with <n_comps=-1>.		Took <total_dur=0.6592029s> in total.<training_dur=0.6452197s>; <prediction_dur=0.0139832s>).
+
+=====> Testing: ['corner_kitchen_rosenfeld', 'draw_multiblock_lbp']
+===> Feature subset testing at step: 40/64
+Testing model.
+================= About to train.
+================= About to predict.
+Got accuracy of <acc=75.0000%> with <n_comps=-1>.		Took <total_dur=0.7549139s> in total.<training_dur=0.7395607s>; <prediction_dur=0.0153532s>).
+
+=====> Testing: ['patches_mean', 'corner_kitchen_rosenfeld', 'draw_multiblock_lbp']
+===> Feature subset testing at step: 41/64
+Testing model.
+================= About to train.
+================= About to predict.
+Got accuracy of <acc=70.0000%> with <n_comps=-1>.		Took <total_dur=0.7367526s> in total.<training_dur=0.7216579s>; <prediction_dur=0.0150947s>).
+
+=====> Testing: ['patches_std', 'corner_kitchen_rosenfeld', 'draw_multiblock_lbp']
+===> Feature subset testing at step: 42/64
+Testing model.
+================= About to train.
+================= About to predict.
+Got accuracy of <acc=67.5000%> with <n_comps=-1>.		Took <total_dur=0.7476659s> in total.<training_dur=0.7323934s>; <prediction_dur=0.0152725s>).
+
+=====> Testing: ['patches_mean', 'patches_std', 'corner_kitchen_rosenfeld', 'draw_multiblock_lbp']
+===> Feature subset testing at step: 43/64
+Testing model.
+================= About to train.
+================= About to predict.
+Got accuracy of <acc=72.5000%> with <n_comps=-1>.		Took <total_dur=0.7555935s> in total.<training_dur=0.7402471s>; <prediction_dur=0.0153465s>).
+
+=====> Testing: ['patches_var', 'corner_kitchen_rosenfeld', 'draw_multiblock_lbp']
+===> Feature subset testing at step: 44/64
+Testing model.
+================= About to train.
+================= About to predict.
+Got accuracy of <acc=67.5000%> with <n_comps=-1>.		Took <total_dur=0.7499181s> in total.<training_dur=0.7345516s>; <prediction_dur=0.0153664s>).
+
+=====> Testing: ['patches_mean', 'patches_var', 'corner_kitchen_rosenfeld', 'draw_multiblock_lbp']
+===> Feature subset testing at step: 45/64
+Testing model.
+================= About to train.
+================= About to predict.
+Got accuracy of <acc=72.5000%> with <n_comps=-1>.		Took <total_dur=0.7595285s> in total.<training_dur=0.7440285s>; <prediction_dur=0.0155000s>).
+
+=====> Testing: ['patches_std', 'patches_var', 'corner_kitchen_rosenfeld', 'draw_multiblock_lbp']
+===> Feature subset testing at step: 46/64
+Testing model.
+================= About to train.
+================= About to predict.
+Got accuracy of <acc=72.5000%> with <n_comps=-1>.		Took <total_dur=0.7506675s> in total.<training_dur=0.7353998s>; <prediction_dur=0.0152677s>).
+
+=====> Testing: ['patches_mean', 'patches_std', 'patches_var', 'corner_kitchen_rosenfeld', 'draw_multiblock_lbp']
+===> Feature subset testing at step: 47/64
+Testing model.
+================= About to train.
+================= About to predict.
+Got accuracy of <acc=77.5000%> with <n_comps=-1>.		Took <total_dur=0.7464406s> in total.<training_dur=0.7310651s>; <prediction_dur=0.0153756s>).
+
+=====> Testing: ['daisy', 'draw_multiblock_lbp']
+===> Feature subset testing at step: 48/64
+Testing model.
+================= About to train.
+================= About to predict.
+Got accuracy of <acc=75.0000%> with <n_comps=-1>.		Took <total_dur=1.4261644s> in total.<training_dur=1.4042219s>; <prediction_dur=0.0219425s>).
+
+=====> Testing: ['patches_mean', 'daisy', 'draw_multiblock_lbp']
+===> Feature subset testing at step: 49/64
+Testing model.
+================= About to train.
+================= About to predict.
+Got accuracy of <acc=77.5000%> with <n_comps=-1>.		Took <total_dur=1.4838939s> in total.<training_dur=1.4616052s>; <prediction_dur=0.0222886s>).
+
+=====> Testing: ['patches_std', 'daisy', 'draw_multiblock_lbp']
+===> Feature subset testing at step: 50/64
+Testing model.
+================= About to train.
+================= About to predict.
+Got accuracy of <acc=80.0000%> with <n_comps=-1>.		Took <total_dur=1.4920198s> in total.<training_dur=1.4694279s>; <prediction_dur=0.0225919s>).
+
+=====> Testing: ['patches_mean', 'patches_std', 'daisy', 'draw_multiblock_lbp']
+===> Feature subset testing at step: 51/64
+Testing model.
+================= About to train.
+================= About to predict.
+Got accuracy of <acc=80.0000%> with <n_comps=-1>.		Took <total_dur=1.5276884s> in total.<training_dur=1.5050655s>; <prediction_dur=0.0226229s>).
+
+=====> Testing: ['patches_var', 'daisy', 'draw_multiblock_lbp']
+===> Feature subset testing at step: 52/64
+Testing model.
+================= About to train.
+================= About to predict.
+Got accuracy of <acc=80.0000%> with <n_comps=-1>.		Took <total_dur=1.4822701s> in total.<training_dur=1.4600901s>; <prediction_dur=0.0221800s>).
+
+=====> Testing: ['patches_mean', 'patches_var', 'daisy', 'draw_multiblock_lbp']
+===> Feature subset testing at step: 53/64
+Testing model.
+================= About to train.
+================= About to predict.
+Got accuracy of <acc=80.0000%> with <n_comps=-1>.		Took <total_dur=1.4910494s> in total.<training_dur=1.4688055s>; <prediction_dur=0.0222438s>).
+
+=====> Testing: ['patches_std', 'patches_var', 'daisy', 'draw_multiblock_lbp']
+===> Feature subset testing at step: 54/64
+Testing model.
+================= About to train.
+================= About to predict.
+Got accuracy of <acc=77.5000%> with <n_comps=-1>.		Took <total_dur=1.5045316s> in total.<training_dur=1.4821037s>; <prediction_dur=0.0224279s>).
+
+=====> Testing: ['patches_mean', 'patches_std', 'patches_var', 'daisy', 'draw_multiblock_lbp']
+===> Feature subset testing at step: 55/64
+Testing model.
+================= About to train.
+================= About to predict.
+Got accuracy of <acc=77.5000%> with <n_comps=-1>.		Took <total_dur=1.5315581s> in total.<training_dur=1.5088686s>; <prediction_dur=0.0226895s>).
+
+=====> Testing: ['corner_kitchen_rosenfeld', 'daisy', 'draw_multiblock_lbp']
+===> Feature subset testing at step: 56/64
+Testing model.
+================= About to train.
+================= About to predict.
+Got accuracy of <acc=75.0000%> with <n_comps=-1>.		Took <total_dur=1.5320524s> in total.<training_dur=1.5084993s>; <prediction_dur=0.0235531s>).
+
+=====> Testing: ['patches_mean', 'corner_kitchen_rosenfeld', 'daisy', 'draw_multiblock_lbp']
+===> Feature subset testing at step: 57/64
+Testing model.
+================= About to train.
+================= About to predict.
+Got accuracy of <acc=77.5000%> with <n_comps=-1>.		Took <total_dur=1.5224210s> in total.<training_dur=1.4990130s>; <prediction_dur=0.0234080s>).
+
+=====> Testing: ['patches_std', 'corner_kitchen_rosenfeld', 'daisy', 'draw_multiblock_lbp']
+===> Feature subset testing at step: 58/64
+Testing model.
+================= About to train.
+================= About to predict.
+Got accuracy of <acc=77.5000%> with <n_comps=-1>.		Took <total_dur=1.5127857s> in total.<training_dur=1.4891823s>; <prediction_dur=0.0236034s>).
+
+=====> Testing: ['patches_mean', 'patches_std', 'corner_kitchen_rosenfeld', 'daisy', 'draw_multiblock_lbp']
+===> Feature subset testing at step: 59/64
+Testing model.
+================= About to train.
+================= About to predict.
+Got accuracy of <acc=82.5000%> with <n_comps=-1>.		Took <total_dur=1.5604906s> in total.<training_dur=1.5354338s>; <prediction_dur=0.0250568s>).
+
+=====> Testing: ['patches_var', 'corner_kitchen_rosenfeld', 'daisy', 'draw_multiblock_lbp']
+===> Feature subset testing at step: 60/64
+Testing model.
+================= About to train.
+================= About to predict.
+Got accuracy of <acc=77.5000%> with <n_comps=-1>.		Took <total_dur=1.5222238s> in total.<training_dur=1.4986116s>; <prediction_dur=0.0236122s>).
+
+=====> Testing: ['patches_mean', 'patches_var', 'corner_kitchen_rosenfeld', 'daisy', 'draw_multiblock_lbp']
+===> Feature subset testing at step: 61/64
+Testing model.
+================= About to train.
+================= About to predict.
+Got accuracy of <acc=82.5000%> with <n_comps=-1>.		Took <total_dur=1.5934563s> in total.<training_dur=1.5655125s>; <prediction_dur=0.0279439s>).
+
+=====> Testing: ['patches_std', 'patches_var', 'corner_kitchen_rosenfeld', 'daisy', 'draw_multiblock_lbp']
+===> Feature subset testing at step: 62/64
+Testing model.
+================= About to train.
+================= About to predict.
+Got accuracy of <acc=80.0000%> with <n_comps=-1>.		Took <total_dur=1.5482912s> in total.<training_dur=1.5251905s>; <prediction_dur=0.0231007s>).
+
+=====> Testing: ['patches_mean', 'patches_std', 'patches_var', 'corner_kitchen_rosenfeld', 'daisy', 'draw_multiblock_lbp']
+===> Feature subset testing at step: 63/64
+Testing model.
+================= About to train.
+================= About to predict.
+Got accuracy of <acc=75.0000%> with <n_comps=-1>.		Took <total_dur=1.5615012s> in total.<training_dur=1.5379866s>; <prediction_dur=0.0235146s>).
+Tests done. <best=82.5000%>
